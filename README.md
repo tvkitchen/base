@@ -8,6 +8,7 @@ It is critical that great care be taken before adding code to this repository, s
 
 * `errors/*` - Errors that thrown by the interfaces defined in this repo.
 * `interfaces/*` - Interfaces used by the TV Kitchen.
+* `Payload.js` - A serializable payload used to communicate between appliances.
 
 ## NOT included in this repository
 
