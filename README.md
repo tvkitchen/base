@@ -5,7 +5,8 @@ This repository contains base definitions such as interfaces, universal constant
 It is critical that great care be taken before adding code to this repository, since everything here represents coupling across the entire TV Kitchen ecosystem.
 
 ## Included in this repository
-TKTKTK
+
+* `errors/*` - Errors that thrown by the interfaces defined in this repo.
 
 ## NOT included in this repository
 
