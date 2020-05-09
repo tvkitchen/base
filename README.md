@@ -1,13 +1,17 @@
-# TV Kitchen Appliance: Template
+# TV Kitchen: Base
 
-This is a template repository for TV Kitchen Appliances.
+This repository contains base definitions such as interfaces, universal constants, data objects, and errors.
 
-It reflects the shape of a TV Kitchen appliance to make it easier to contribute new functionality to the TV Kitchen ecosystem.
+It is critical that great care be taken before adding code to this repository, since everything here represents coupling across the entire TV Kitchen ecosystem.
 
-## Creating your appliance
+## Included in this repository
+TKTKTK
 
-If you are trying to create an official TV Kitchen Appliance the package should be named `@tv-kitchen/appliance-NAME` (e.g. `@tv-kitchen/appliance-caption-extraction`).
+## NOT included in this repository
 
+Utilities, interface implementations (including abstract implementations), and other seemingly useful common code elements should NOT be included in this repository.
+
+We want to minimize universal coupling. Abstract implementations specific to an architectural component should be placed in an appropriate repository depending on the nature of the element in question.
 
 ## About the TV Kitchen
 
