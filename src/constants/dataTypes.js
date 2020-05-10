@@ -1,0 +1,12 @@
+export const STREAM = {
+	ANY: 'STREAM.ANY',
+	DATA: 'STREAM.DATA',
+}
+
+export const TEXT = {
+	ANY: 'TEXT.ANY',
+	ATOM: 'TEXT.ATOM',
+	WORD: 'TEXT.WORD',
+	SENTENCE: 'TEXT.SENTENCE',
+	BLOB: 'TEXT.BLOB',
+}
