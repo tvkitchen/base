@@ -7,6 +7,7 @@ It is critical that great care be taken before adding code to this repository, s
 ## Included in this repository
 
 * `errors/*` - Errors that thrown by the interfaces defined in this repo.
+* `interfaces/*` - Interfaces used by the TV Kitchen.
 
 ## NOT included in this repository
 
