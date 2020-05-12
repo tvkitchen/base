@@ -6,6 +6,7 @@ It is critical that great care be taken before adding code to this repository, s
 
 ## Included in this repository
 
+* `constants/dataTypes` - The data types that appliances can consume or produce.
 * `errors/*` - Errors that thrown by the interfaces defined in this repo.
 * `interfaces/*` - Interfaces used by the TV Kitchen.
 * `Payload.js` - A serializable payload used to communicate between appliances.
