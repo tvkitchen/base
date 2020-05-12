@@ -1,11 +1,11 @@
 {
-  "name": "@tv-kitchen/appliance-template",
+  "name": "@tv-kitchen/base",
   "version": "1.0.0",
-  "description": "A template for TV Kitchen Appliances.",
+  "description": "Interface-level abstract definitions, DTOs, type definitions for use across TV Kitchen components.",
   "main": "src/index.js",
-  "repository": "git@github.com:tvkitchen/tvka-template.git",
+  "repository": "git@github.com:tvkitchen/base.git",
   "author": "Bad Idea Factory <biffuddotcom@biffud.com>",
-  "license": "Apache 2.0",
+  "license": "Apache-2.0",
   "scripts": {
     "build": "babel src -d dist",
     "lint": "./node_modules/.bin/eslint 'src/**/*.js'",

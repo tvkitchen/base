@@ -1,3 +1,1 @@
-import Appliance from './Appliance'
-
-export default Appliance
+export * as errors from './errors'
