@@ -1,7 +1,7 @@
 import {
 	InterfaceInstantiationError,
 	NotImplementedError,
-} from '../errors'
+} from '@tvkitchen/base-errors'
 
 class IAppliance {
 	/**

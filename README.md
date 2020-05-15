@@ -1,21 +1,26 @@
 # TV Kitchen: Base
 
-This repository contains base definitions such as interfaces, universal constants, data objects, and errors.
+This monorepo contains four base packages that are imported by various portions of the TV Kitchen:
 
-It is critical that great care be taken before adding code to this repository, since everything here represents coupling across the entire TV Kitchen ecosystem.
+* `@tvkitchen/base-errors` contains common error types.
+* `@tvkitchen/base-interfaces` contains interfaces that define the shape of modular architectural components.
+* `@tvkitchen/base-classes` contains the Payload class, which is used to communicate between appliances.
+* `@tvkitchen/base-constants` contains constant strings that define interfaces across the project (e.g. types of data being passed around).
 
-## Included in this repository
+## Driving Philosophy
 
-* `constants/dataTypes` - The data types that appliances can consume or produce.
-* `errors/*` - Errors that thrown by the interfaces defined in this repo.
-* `interfaces/*` - Interfaces used by the TV Kitchen.
-* `Payload.js` - A serializable payload used to communicate between appliances.
-
-## NOT included in this repository
-
-Utilities, interface implementations (including abstract implementations), and other seemingly useful common code elements should NOT be included in this repository.
+Utilities, interface implementations (including abstract implementations), and other seemingly useful common code elements should NOT be included in this repository or these packages.
 
 We want to minimize universal coupling. Abstract implementations specific to an architectural component should be placed in an appropriate repository depending on the nature of the element in question.
+
+## Setting Up
+
+After installing project dependencies (`yarn install`) you will need to run:
+
+- `yarn build`
+- `yarn bootstrap`
+
+This will build and link sibling dependencies.
 
 ## About the TV Kitchen
 
