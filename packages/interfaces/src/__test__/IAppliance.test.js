@@ -1,8 +1,8 @@
-import { IAppliance } from '..'
 import {
 	InterfaceInstantiationError,
 	NotImplementedError,
-} from '../../errors'
+} from '@tvkitchen/base-errors'
+import { IAppliance } from '..'
 import {
 	FullyImplementedAppliance,
 	PartiallyImplementedAppliance,
