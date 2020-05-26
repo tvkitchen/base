@@ -18,7 +18,8 @@ class Payload {
 
 	static deserialize = (serializedPayload) => {
 		const deserializedPayload = JSON.parse(serializedPayload, (key, value) => {
-			if (typeof value === 'object') {
+			if (typeof value === 'object'
+					&& value != null) {
 				const stringifiedType = value.type || ''
 				if (stringifiedType === 'Buffer') {
 					return Buffer.from(value.data || '')
