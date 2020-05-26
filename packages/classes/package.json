@@ -1,6 +1,11 @@
 {
   "name": "@tvkitchen/base-classes",
   "version": "0.0.0",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/tvkitchen/base.git",
+    "directory": "packages/classes"
+  },
   "main": "lib/index.js",
   "module": "src/index.js"
 }
