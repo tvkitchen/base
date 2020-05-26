@@ -75,6 +75,11 @@ describe('Payload', () => {
 			const deserializedPayload = Payload.deserialize(serializedPayload)
 			expect(deserializedPayload).toMatchSnapshot()
 		})
+		it('should properly deserialize payload strings with null values', () => {
+			const serializedPayload = '{"data":"hello","type":null}'
+			const deserializedPayload = Payload.deserialize(serializedPayload)
+			expect(deserializedPayload).toMatchSnapshot()
+		})
 		it('should properly deserialize a serialized payload containing buffered data', () => {
 			const data = fs.readFileSync(path.join(__dirname, '/data/thinkingface.png'))
 			const parameters = {

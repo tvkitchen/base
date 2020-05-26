@@ -7,6 +7,13 @@ Payload {
 }
 `;
 
+exports[`Payload deserialize should properly deserialize payload strings with null values 1`] = `
+Payload {
+  "data": "hello",
+  "type": null,
+}
+`;
+
 exports[`Payload serialize should properly should serialize data with a fully populated object 1`] = `"{\\"data\\":\\"I ate all of the cheese\\",\\"type\\":\\"CONFESSION\\"}"`;
 
 exports[`Payload serialize should properly should serialize data with a partially populated object 1`] = `"{\\"data\\":\\"I ate all of the cheese\\",\\"type\\":null}"`;
