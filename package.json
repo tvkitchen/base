@@ -15,7 +15,8 @@
     "test": "jest"
   },
   "files": [
-    "dist/"
+    "lib/",
+    "src/"
   ],
   "workspaces": [
     "packages/*"
