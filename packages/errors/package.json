@@ -1,6 +1,7 @@
 {
   "name": "@tvkitchen/base-errors",
   "version": "0.0.0",
+  "repository": "https://github.com/tvkitchen/base/tree/master/packages/errors",
   "main": "lib/index.js",
   "module": "src/index.js"
 }
