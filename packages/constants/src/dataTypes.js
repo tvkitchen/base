@@ -1,6 +1,6 @@
 export const STREAM = {
 	ANY: 'STREAM.ANY',
-	DATA: 'STREAM.DATA',
+	CONTAINER: 'STREAM.CONTAINER',
 }
 
 export const TEXT = {

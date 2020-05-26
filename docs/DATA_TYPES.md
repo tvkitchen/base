@@ -24,7 +24,7 @@ Data type constants have some naming (and value) rules.
 STREAM content is generally pulled from an Ingestion Engine and passed to the countertop.
 
 * `STREAM.ALL` - Any type of stream data.
-* `STREAM.DATA` - Buffers representing a portion of data stream.
+* `STREAM.CONTAINER` - Buffers representing a portion of an mpegts data stream.
 
 ### TEXT
 * `TEXT.ALL` - Any type of text data.
