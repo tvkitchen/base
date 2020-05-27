@@ -20,6 +20,8 @@ If your PR fixes a bug or adds a feature, please write a test to go with the cha
 
 If you introduce a new framework or dependency, add the necessary information to [INSTALL.md](docs/INSTALL.md) and the other documentation.
 
+If appropriate, add a line describing your change to the package's CHANGELOG in the "Unreleased" section, nested under the appropriate header (such as "Added" or "Fixed"). We follow the [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) format, so please familiarize yourself with it!
+
 ### Configurations
 
 We're using `dotenv` for general runtime configuration settings. Never hard code values that should be configurable, but instead edit the .env.template file.
