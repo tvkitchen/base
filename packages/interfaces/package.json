@@ -11,5 +11,8 @@
   "module": "src/index.js",
   "dependencies": {
     "@tvkitchen/base-errors": "*"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
