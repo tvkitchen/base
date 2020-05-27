@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/tvkitchen/base.svg?branch=master)](https://travis-ci.com/tvkitchen/base)
+
 # TV Kitchen: Base
 
 This monorepo contains four base packages that are imported by various portions of the TV Kitchen:
