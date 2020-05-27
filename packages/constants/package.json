@@ -2,8 +2,8 @@
   "name": "@tvkitchen/base-constants",
   "version": "0.0.0",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/tvkitchen/base.git",
+    "type": "git",
+    "url": "https://github.com/tvkitchen/base.git",
     "directory": "packages/constants"
   },
   "license": "Apache-2.0",
