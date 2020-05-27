@@ -6,6 +6,7 @@
     "url" : "https://github.com/tvkitchen/base.git",
     "directory": "packages/constants"
   },
+  "license": "Apache-2.0",
   "main": "lib/index.js",
   "module": "src/index.js"
 }
