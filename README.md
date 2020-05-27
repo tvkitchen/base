@@ -15,12 +15,11 @@ We want to minimize universal coupling. Abstract implementations specific to an 
 
 ## Setting Up
 
-After installing project dependencies (`yarn install`) you will need to run:
+```sh
+yarn install
+```
 
-- `yarn build`
-- `yarn bootstrap`
-
-This will build and link sibling dependencies.
+This will install project dependencies, link local sibling dependencies (we're using [Yarn Workspaces](https://classic.yarnpkg.com/en/docs/workspaces/)), and build/transpile each package.
 
 ## About the TV Kitchen
 
