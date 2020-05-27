@@ -1,6 +1,6 @@
 {
   "name": "@tvkitchen/base-interfaces",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/tvkitchen/base.git",
@@ -10,7 +10,7 @@
   "main": "lib/index.js",
   "module": "src/index.js",
   "dependencies": {
-    "@tvkitchen/base-errors": "*"
+    "@tvkitchen/base-errors": "^1.0.0"
   },
   "publishConfig": {
     "access": "public"
