@@ -1,48 +1,26 @@
 # Contribution Guidelines
 
-This document contains information of use to developers looking to improve this codebase.  See [README.md](README.md) for an introduction to this project. All discussions about this project fall under our [code of conduct](docs/CODE_OF_CONDUCT.md).
+This document contains information of use to developers looking to improve this codebase.  See the [README](../README.md) for an introduction to this project. All discussions about this project fall under our [code of conduct](CODE_OF_CONDUCT.md).
 
 ## Submitting and Reviewing Code
 
-This repository has a home on [GitHub](https://github.com/tvkitchen/tv-kitchen).  Please submit [pull requests](https://help.github.com/articles/about-pull-requests/) (PRs) there.
+This repository has a home on [GitHub](https://github.com/tvkitchen/base).  Please submit [pull requests](https://help.github.com/articles/about-pull-requests/) (PRs) there.
 
-Please submit changes via pull request, even if you have direct commit access to the repository.  The PR process allows us to get additional eyes on change proposals, and ensures that your changed code [builds cleanly via Travis CI's automated builds](https://travis-ci.org/tvkitchen/tv-kitchen/).
+Please submit changes via pull request, even if you have direct commit access to the repository.  The PR process allows us to get additional eyes on change proposals, and ensures that your changed code [builds cleanly via Travis CI's automated builds](https://travis-ci.com/tvkitchen/base/).
 
-As you work on your branch, try to test it locally to ensure that it still builds and deploys properly, and that you haven't introduced new accessibility bugs. See `docs/TESTING.md` for more instructions.
+As you work on your branch, try to test it locally to ensure that it still builds and deploys properly, and that you haven't introduced new accessibility bugs.
 
-Generally, the more controversial, complex or large a change, the more opportunity people should have to comment on it.  That means it should garner more comments/approvals, or it means it should sit longer before being merged. You can talk with us about a change you'd like to make before or while you work on it; see [the participation section of the README](README.md#participating). We don't have hard rules about such things, and documentation changes usually don't need to sit as long as functional changes, but figure a business day or two for an average patch to get discussed.
+Generally, the more controversial, complex, or large a change, the more opportunity people should have to comment on it.  That means it should garner more comments/approvals, or it means it should sit longer before being merged. You can talk with us about a change you'd like to make before or while you work on it. We don't have hard rules about such things, and documentation changes usually don't need to sit as long as functional changes, but figure a business day or two for an average patch to get discussed.
 
 As to when to merge, that's a judgment call.  Usually once an "approved" review goes through, and there aren't any more changes requested, then the author of the PR will merge it (if they have access to push to master).  Generally, wait to merge until the conversation around a change has concluded.  If you're unsure, ask!  "Is this ready to merge?" is often a useful next step in the conversation.
 
-If your PR fixes a bug or adds a feature, please write a test to go with the change (see [TESTING.md](docs/TESTING.md) for details on our testing framework).  If the change involves libraries or would be difficult to test, please use a Given-When-Then description or describe in your PR message how reviewers should test that your change works as expected.
+If your PR fixes a bug or adds a feature, please write a test to go with the change.  If the change involves libraries or would be difficult to test, please use a Given-When-Then description or describe in your PR message how reviewers should test that your change works as expected.
 
 ### Document as you go
 
-If you introduce a new framework or dependency, add the necessary information to [INSTALL.md](docs/INSTALL.md) and the other documentation.
+If you introduce a new framework or dependency, add the necessary information to the [README](../README.md) and any other relevant documentation.
 
 If appropriate, add a line describing your change to the package's CHANGELOG in the "Unreleased" section, nested under the appropriate header (such as "Added" or "Fixed"). We follow the [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) format, so please familiarize yourself with it!
-
-### Configurations
-
-We're using `dotenv` for general runtime configuration settings. Never hard code values that should be configurable, but instead edit the .env.template file.
-
-Commits that introduce a new configurable variable should also document the configuration steps in the commit message.
-
-### Migrations
-
-The golden rule of migrations: Never edit a migration file that has been committed to master.
-
-We're using `sequelize` as our ORM and migration library.  You can get a list of sequelize commands by typing:
-
-```
-> sequelize
-```
-
-You can run migrations by typing:
-
-```
-> yarn migrate
-```
 
 ### Linting and Code Style
 
@@ -132,12 +110,13 @@ If you paired with someone on your change, or if you are incorporating the work 
 
 This project uses the [editorconfig framework](https://editorconfig.org/) and a linter to maintain rules around whitespace for various file types.  If you are introducing a new file type please be sure to also add a separate commit to your branch which populates the editorconfig appropriately.
 
-Please uses spaces, never tabs, and avoid trailing whitespaces.  The file [.editorconfig](.editorconfig), in the repository's root directory, encodes these formatting conventions in a way that most text editors can read.
+Please use tabs and avoid trailing whitespace.  The file [.editorconfig](../.editorconfig), in the repository's root directory, encodes these formatting conventions in a way that most text editors can read.
 
-If committed code makes it through and does not conform to these standards.  When you find yourself about to make changes to such code, please first make a whitespace-only commit to regularize the indentation, and then make a separate commit with your code changes.
+Sometimes, committed code makes it through that did not conform to these standards.  When you find yourself about to make changes to such code, please first make a whitespace-only commit to regularize the indentation, and then make a separate commit with your code changes. This ensures we can examine the substantive changes separate from the whitespace-only changes.
 
 ### Licensing Your Contribution
-As a BIFFUD Project this is published as open source software using the [Apache License 2.0](LICENSE).  It is important that the codebase continue to be publishable under that license.  To make that possible, here are some guidelines on including 3rd party code in the codebase.
+
+As a BIFFUD Project this is published as open source software using the [Apache License 2.0](../LICENSE).  It is important that the codebase continue to be publishable under that license.  To make that possible, here are some guidelines on including 3rd party code in the codebase.
 
 If you submit code that you wrote or that you have authority to submit from your employer or institution, you give it to us under the MIT license.  If the material you submit is already licensed under a more permissive license (BSD, ISC), you can tell us that and give it to us under that license instead.
 
