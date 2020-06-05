@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+### Added
+- Added time attributes to `Payload`.
+- Added documentation for `Payload`.
+
 ### Changed
 - Improved package description.
 

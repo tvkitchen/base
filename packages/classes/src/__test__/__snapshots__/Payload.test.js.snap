@@ -2,20 +2,28 @@
 
 exports[`Payload deserialize should properly deserialize a serialized payload 1`] = `
 Payload {
+  "createdAt": "2020-02-02T03:04:05.000Z",
   "data": "I ate all of the cheese",
+  "duration": 1000,
+  "position": 60000,
+  "timestamp": "2020-02-02T03:04:01.000Z",
   "type": "CONFESSION",
 }
 `;
 
 exports[`Payload deserialize should properly deserialize payload strings with null values 1`] = `
 Payload {
+  "createdAt": "",
   "data": "hello",
+  "duration": 0,
+  "position": 0,
+  "timestamp": "",
   "type": null,
 }
 `;
 
-exports[`Payload serialize should properly should serialize data with a fully populated object 1`] = `"{\\"data\\":\\"I ate all of the cheese\\",\\"type\\":\\"CONFESSION\\"}"`;
+exports[`Payload serialize should properly should serialize data with a fully populated object 1`] = `"{\\"data\\":\\"I ate all of the cheese\\",\\"type\\":\\"CONFESSION\\",\\"createdAt\\":\\"2020-02-02T03:04:05.000Z\\",\\"timestamp\\":\\"2020-02-02T03:04:01.000Z\\",\\"duration\\":1000,\\"position\\":60000}"`;
 
-exports[`Payload serialize should properly should serialize data with a partially populated object 1`] = `"{\\"data\\":\\"I ate all of the cheese\\",\\"type\\":null}"`;
+exports[`Payload serialize should properly should serialize data with a partially populated object 1`] = `"{\\"data\\":\\"I ate all of the cheese\\",\\"type\\":null,\\"createdAt\\":\\"\\",\\"timestamp\\":\\"\\",\\"duration\\":0,\\"position\\":0}"`;
 
-exports[`Payload serialize should properly should serialize data with an empty object 1`] = `"{\\"data\\":null,\\"type\\":null}"`;
+exports[`Payload serialize should properly should serialize data with an empty object 1`] = `"{\\"data\\":null,\\"type\\":null,\\"createdAt\\":\\"\\",\\"timestamp\\":\\"\\",\\"duration\\":0,\\"position\\":0}"`;
