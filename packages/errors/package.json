@@ -1,7 +1,7 @@
 {
   "name": "@tvkitchen/base-errors",
   "description": "Errors used by TV Kitchen components.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/tvkitchen/base.git",
