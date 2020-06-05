@@ -17,3 +17,7 @@ or using npm:
 ```sh
 npm install --save-dev @tvkitchen/base-classes
 ```
+
+## About the Classes
+
+* [Payload](docs/PAYLOAD.md): used to pass data between components.
