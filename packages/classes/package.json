@@ -1,5 +1,6 @@
 {
   "name": "@tvkitchen/base-classes",
+  "description": "Classes used for communication between TV Kitchen components.",
   "version": "1.0.0",
   "repository": {
     "type": "git",
