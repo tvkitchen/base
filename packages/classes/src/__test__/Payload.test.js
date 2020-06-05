@@ -21,11 +21,19 @@ describe('Payload', () => {
 			const parameters = {
 				data: 'I ate all of the cheese',
 				type: 'CONFESSION',
+				createdAt: '2020-02-02T03:04:05.000Z',
+				timestamp: '2020-02-02T03:04:01.000Z',
+				duration: 1000,
+				position: 60000,
 			}
 			const payload = new Payload(parameters)
 			expect(payload).not.toBeUndefined()
 			expect(payload.data).toBe('I ate all of the cheese')
 			expect(payload.type).toBe('CONFESSION')
+			expect(payload.createdAt).toEqual('2020-02-02T03:04:05.000Z')
+			expect(payload.timestamp).toEqual('2020-02-02T03:04:01.000Z')
+			expect(payload.duration).toBe(1000)
+			expect(payload.position).toBe(60000)
 		})
 	})
 
@@ -47,6 +55,10 @@ describe('Payload', () => {
 			const parameters = {
 				data: 'I ate all of the cheese',
 				type: 'CONFESSION',
+				createdAt: '2020-02-02T03:04:05.000Z',
+				timestamp: '2020-02-02T03:04:01.000Z',
+				duration: 1000,
+				position: 60000,
 			}
 			const payload = new Payload(parameters)
 			const serializedPayload = Payload.serialize(payload)
@@ -69,6 +81,10 @@ describe('Payload', () => {
 			const parameters = {
 				data: 'I ate all of the cheese',
 				type: 'CONFESSION',
+				createdAt: '2020-02-02T03:04:05.000Z',
+				timestamp: '2020-02-02T03:04:01.000Z',
+				duration: 1000,
+				position: 60000,
 			}
 			const payload = new Payload(parameters)
 			const serializedPayload = Payload.serialize(payload)

@@ -1,16 +1,28 @@
 const defaults = {
 	data: null,
 	type: null,
+	createdAt: '',
+	timestamp: '',
+	duration: 0,
+	position: 0,
 }
 
 class Payload {
 	constructor({
 		data = defaults.data,
 		type = defaults.type,
+		createdAt = defaults.createdAt,
+		timestamp = defaults.timestamp,
+		duration = defaults.duration,
+		position = defaults.position,
 	} = defaults) {
 		Object.assign(this, {
 			data,
 			type,
+			createdAt,
+			timestamp,
+			duration,
+			position,
 		})
 	}
 
