@@ -10,6 +10,7 @@
 - [ ] Documentation
 - [ ] Consolidated commits
 - [ ] Relevant labels assigned
+- [ ] Changelog(s) updated
 
 ## Steps to Test
 1. `yarn test`
