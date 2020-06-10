@@ -46,6 +46,20 @@ class IAppliance {
 	}
 
 	/**
+	 * Prepares the Appliance to process data.
+	 */
+	setup = async () => {
+		throw new NotImplementedError('setup')
+	}
+
+	/**
+	 * Cleans up after processing is complete.
+	 */
+	teardown = async () => {
+		throw new NotImplementedError('teardown')
+	}
+
+	/**
 	 * Invokes the appliance on any unprocessed data in the appliance buffer.
 	 *
 	 * @return {Boolean} True if the appliance procesed data; False if the appliance needs more data.
