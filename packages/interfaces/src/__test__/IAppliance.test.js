@@ -53,6 +53,32 @@ describe('IAppliance', () => {
 		})
 	})
 
+	describe('setup', () => {
+		it('should throw an error when called without implementation', async () => {
+			const appliance = new PartiallyImplementedAppliance()
+			await expect(async () => appliance.setup())
+				.rejects.toBeInstanceOf(NotImplementedError)
+		})
+
+		it('should not throw an error when called with implementation', async () => {
+			const appliance = new FullyImplementedAppliance()
+			expect(await appliance.setup()).toBeDefined()
+		})
+	})
+
+	describe('teardown', () => {
+		it('should throw an error when called without implementation', async () => {
+			const appliance = new PartiallyImplementedAppliance()
+			await expect(async () => appliance.teardown())
+				.rejects.toBeInstanceOf(NotImplementedError)
+		})
+
+		it('should not throw an error when called with implementation', async () => {
+			const appliance = new FullyImplementedAppliance()
+			expect(await appliance.teardown()).toBeDefined()
+		})
+	})
+
 	describe('invoke', () => {
 		it('should throw an error when called without implementation', async () => {
 			const appliance = new PartiallyImplementedAppliance()
