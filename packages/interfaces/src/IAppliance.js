@@ -60,11 +60,15 @@ class IAppliance {
 	}
 
 	/**
-	 * Invokes the appliance on any unprocessed data in the appliance buffer.
+	 * Invokes the appliance on unprocessed data.
+	 * This generally should not be called directly, but rather Payloads should be passed to the
+	 * Appliance using the ingestPayload method.
 	 *
-	 * @return {Boolean} True if the appliance procesed data; False if the appliance needs more data.
+	 * @param {PayloadArray} payloads A PayloadArray containing Payloads that should be processed.
+	 * @return {PayloadArray}         Leftover Payloads that still need to be processed.
 	 */
-	invoke = async () => {
+	// eslint-disable-next-line no-unused-vars
+	invoke = async (payloads) => {
 		throw new NotImplementedError('invoke')
 	}
 
