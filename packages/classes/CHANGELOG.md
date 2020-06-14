@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- (MINOR) Definition of the `PayloadArray` class.
+
+### Changed
+- (PATCH) Cleanup of `Payload` unit test names.
+
 ## [1.1.0] - 2020-06-05
 
 ### Added
