@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - (MINOR) Creation of the sortedArray `sortedIndexBy` utility method.
+- (MINOR) Definition of the `PayloadArray` class.
 
 ### Changed
 - (PATCH) Cleanup of `Payload` unit test names.
