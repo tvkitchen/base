@@ -11,6 +11,7 @@
   "main": "lib/index.js",
   "module": "src/index.js",
   "dependencies": {
+    "@tvkitchen/base-constants": "^1.1.0",
     "@tvkitchen/base-errors": "^1.0.0"
   },
   "publishConfig": {
