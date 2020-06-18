@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - `setup` and `teardown` abstract methods to IAppliance.
+- (MINOR): Added a logger to the IAppliance API.
 
 ## [1.0.1] - 2020-06-05
 
