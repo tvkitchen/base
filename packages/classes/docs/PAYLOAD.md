@@ -5,7 +5,7 @@ Payloads provide a consistent structured format for TV data. If you are using or
 For example:
 
 - `Ingestion Engines` produce Payloads containing video data.
-- `Appliances` consume {ayloads, invoke their transformation or other process, and emit Payloads with new types of data.
+- `Appliances` consume Payloads, invoke their transformation or other process, and emit Payloads with new types of data.
 - `The Countertop` announces new Payloads as they are generated.
 - The TV Kitchen stream API emits Payloads as they are announced by `The Countertop`. 
 

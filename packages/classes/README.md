@@ -21,3 +21,4 @@ npm install --save-dev @tvkitchen/base-classes
 ## About the Classes
 
 * [Payload](docs/PAYLOAD.md): used to pass data between components.
+* [PayloadArray](docs/PAYLOAD_ARRAY.md): used to store and filter a series of payloads.
