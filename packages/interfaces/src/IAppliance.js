@@ -31,6 +31,18 @@ class IAppliance {
 	}
 
 	/**
+	 * Checks to ensure that third party dependencies are available to the appliance.
+	 *
+	 * If anything is missing or misconfigured it will log an error message explaining the corrective
+	 * steps, and will return false.
+	 *
+	 * @return {Boolean} Whether the dependencies and configurations properly exist.
+	 */
+	audit = () => {
+		throw new NotImplementedError('audit')
+	}
+
+	/**
 	 * Getter for the list of data types accepted by the appliance.
 	 *
 	 * @return {String[]} The list of data types accepted by the appliance.

@@ -108,6 +108,18 @@ describe('IAppliance', () => {
 		})
 	})
 
+	describe('audit', () => {
+		it('should throw an error when called without implementation', () => {
+			const appliance = new PartiallyImplementedAppliance()
+			expect(() => appliance.audit()).toThrow(NotImplementedError)
+		})
+
+		it('should not throw an error when called with implementation', () => {
+			const appliance = new FullyImplementedAppliance()
+			expect(() => appliance.audit()).not.toThrow(NotImplementedError)
+		})
+	})
+
 	describe('getOutputTypes', () => {
 		it('should throw an error when called without implementation', () => {
 			const appliance = new PartiallyImplementedAppliance()

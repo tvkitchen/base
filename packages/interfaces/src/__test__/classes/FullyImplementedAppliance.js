@@ -1,6 +1,8 @@
 import IAppliance from '../../IAppliance'
 
 class FullyImplementedAppliance extends IAppliance {
+	audit = () => true
+
 	getInputTypes = () => []
 
 	getOutputTypes = () => []
