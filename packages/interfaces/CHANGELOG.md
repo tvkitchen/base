@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - (MAJOR): Modification of `invoke` (`IAppliance`) to return a PayloadArray.
 
 ### Added
+- (MINOR): Added an `audit` method to `IAppliance`.
 - `setup` and `teardown` abstract methods to IAppliance.
 - (MINOR): Added a logger to the IAppliance API.
 
