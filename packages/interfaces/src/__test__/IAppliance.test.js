@@ -109,14 +109,15 @@ describe('IAppliance', () => {
 	})
 
 	describe('audit', () => {
-		it('should throw an error when called without implementation', () => {
+		it('should throw an error when called without implementation', async () => {
 			const appliance = new PartiallyImplementedAppliance()
-			expect(() => appliance.audit()).toThrow(NotImplementedError)
+			await expect(async () => appliance.audit())
+				.rejects.toBeInstanceOf(NotImplementedError)
 		})
 
-		it('should not throw an error when called with implementation', () => {
+		it('should not throw an error when called with implementation', async () => {
 			const appliance = new FullyImplementedAppliance()
-			expect(() => appliance.audit()).not.toThrow(NotImplementedError)
+			expect(await appliance.audit()).toBeDefined()
 		})
 	})
 

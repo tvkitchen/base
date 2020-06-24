@@ -38,7 +38,7 @@ class IAppliance {
 	 *
 	 * @return {Boolean} Whether the dependencies and configurations properly exist.
 	 */
-	audit = () => {
+	audit = async () => {
 		throw new NotImplementedError('audit')
 	}
 
