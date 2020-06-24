@@ -7,12 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.2.0] - 2020-06-23
+
 ### Added
-- (MINOR) Creation of the sortedArray `sortedIndexBy` utility method.
-- (MINOR) Definition of the `PayloadArray` class.
+- A sortedArray `sortedIndexBy` utility method.
+- Definition of the `PayloadArray` class.
 
 ### Changed
-- (PATCH) Cleanup of `Payload` unit test names.
+- Cleanup of `Payload` unit test names.
 
 ## [1.1.0] - 2020-06-05
 
@@ -29,6 +31,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Definition of the `Payload` class.
 - Initial setup.
 
-[Unreleased]: https://github.com/tvkitchen/base/compare/@tvkitchen/base-classes@1.1.0...HEAD
+[Unreleased]: https://github.com/tvkitchen/base/compare/@tvkitchen/base-classes@1.2.0...HEAD
+[1.2.0]: https://github.com/tvkitchen/base/compare/@tvkitchen/base-classes@1.1.0...1.2.0
 [1.1.0]: https://github.com/tvkitchen/base/compare/@tvkitchen/base-classes@1.0.0...@tvkitchen/base-classes@1.1.0
 [1.0.0]: https://github.com/tvkitchen/base/releases/tag/@tvkitchen/base-classes@1.0.0
