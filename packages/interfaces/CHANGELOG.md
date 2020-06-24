@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.0.0] - 2020-06-23
+### Changed
+- `audit` method turned to an async method.
+
 ## [2.0.0] - 2020-06-23
 ### Changed
 - `invoke` (`IAppliance`) to consume a PayloadArray.
@@ -28,7 +32,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `IAppliance` core interface.
 - Initial setup.
 
-[Unreleased]: https://github.com/tvkitchen/base/compare/@tvkitchen/base-interfaces@2.0.0...HEAD
+[Unreleased]: https://github.com/tvkitchen/base/compare/@tvkitchen/base-interfaces@3.0.0...HEAD
+[3.0.0]: https://github.com/tvkitchen/base/compare/@tvkitchen/base-interfaces@2.0.0...@tvkitchen/base-interfaces@3.0.0
 [2.0.0]: https://github.com/tvkitchen/base/compare/@tvkitchen/base-interfaces@1.0.1...@tvkitchen/base-interfaces@2.0.0
 [1.0.1]: https://github.com/tvkitchen/base/compare/@tvkitchen/base-interfaces@1.0.0...@tvkitchen/base-interfaces@1.0.1
 [1.0.0]: https://github.com/tvkitchen/base/releases/tag/@tvkitchen/base-interfaces@1.0.0
