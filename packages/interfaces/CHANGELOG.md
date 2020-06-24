@@ -6,14 +6,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [2.0.0] - 2020-06-23
 ### Changed
-- (MINOR): Modification of `invoke` (`IAppliance`) to consume a PayloadArray.
-- (MAJOR): Modification of `invoke` (`IAppliance`) to return a PayloadArray.
+- `invoke` (`IAppliance`) to consume a PayloadArray.
+- `invoke` (`IAppliance`) to return a PayloadArray.
 
 ### Added
-- (MINOR): Added an `audit` method to `IAppliance`.
+- `audit` method to `IAppliance`.
 - `setup` and `teardown` abstract methods to IAppliance.
-- (MINOR): Added a logger to the IAppliance API.
+- logger to the IAppliance API.
 
 ## [1.0.1] - 2020-06-05
 
@@ -26,6 +28,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `IAppliance` core interface.
 - Initial setup.
 
-[Unreleased]: https://github.com/tvkitchen/base/compare/@tvkitchen/base-interfaces@1.0.1...HEAD
+[Unreleased]: https://github.com/tvkitchen/base/compare/@tvkitchen/base-interfaces@2.0.0...HEAD
+[2.0.0]: https://github.com/tvkitchen/base/compare/@tvkitchen/base-interfaces@1.0.1...@tvkitchen/base-interfaces@2.0.0
 [1.0.1]: https://github.com/tvkitchen/base/compare/@tvkitchen/base-interfaces@1.0.0...@tvkitchen/base-interfaces@1.0.1
 [1.0.0]: https://github.com/tvkitchen/base/releases/tag/@tvkitchen/base-interfaces@1.0.0
