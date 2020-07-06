@@ -172,4 +172,32 @@ describe('PayloadArray', () => {
 			expect(payloadArray.toArray()).not.toEqual(['pants'])
 		})
 	})
+
+	describe('duckTypeProperties', () => {
+		it('should contain all properties of a PayloadArray', () => {
+			const completePropertySet = new Set([
+				...PayloadArray.duckTypeProperties,
+				...Object.getOwnPropertyNames(new PayloadArray()),
+			])
+			expect(completePropertySet.size).toEqual(PayloadArray.duckTypeProperties.length)
+		})
+	})
+
+	describe('isPayloadArray', () => {
+		it('should properly detect a PayloadArray object', () => {
+			const payloadArray = new PayloadArray()
+			expect(PayloadArray.isPayloadArray(payloadArray)).toBe(true)
+		})
+		it('should properly detect a non-PayloadArray object', () => {
+			const obj = {}
+			expect(PayloadArray.isPayloadArray(obj)).toBe(false)
+		})
+		it('should properly detect a non-PayloadArray object with common fields', () => {
+			const obj = {
+				length: 15,
+				insert: () => true,
+			}
+			expect(PayloadArray.isPayloadArray(obj)).toBe(false)
+		})
+	})
 })

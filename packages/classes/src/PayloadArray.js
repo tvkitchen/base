@@ -21,7 +21,7 @@ class PayloadArray {
 	 * @return {PayloadArray}    This PayloadArray to allow for chaining.
 	 */
 	insert = (payload) => {
-		if (!(payload instanceof Payload)) {
+		if (!Payload.isPayload(payload)) {
 			throw new Error('Attempt to insert a non-Payload to PayloadArray')
 		}
 		const index = this.indexOfPosition(payload.position)
@@ -80,6 +80,30 @@ class PayloadArray {
 	 * @return {Array} The resulting Array.
 	 */
 	toArray = () => [...this.payloads]
+
+	/**
+	 * A comprehensive list of attributes that an object must have to be considered a PayloadArray.
+	 *
+	 * This attribute is INTERNAL and should not be relied on; it may be removed and only exists
+	 * as an optimization to the isPayloadArray method.
+	 *
+	 * @type {Array}
+	 */
+	static duckTypeProperties = Object.getOwnPropertyNames(new PayloadArray())
+
+	/**
+	 * Checks whether an object is an instance of a PayloadArray.
+	 *
+	 * This uses duck typing, rather than instanceof, since we can't rely on the prototype chain
+	 * matching across packages and versions.
+	 *
+	 * @param  {Object} obj The object being tested.
+	 * @return {Boolean}     The result of the duck test.
+	 */
+	static isPayloadArray = (obj) => (
+		PayloadArray.duckTypeProperties
+			.every((property) => Object.prototype.hasOwnProperty.call(obj, property))
+	)
 }
 
 export default PayloadArray
