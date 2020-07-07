@@ -233,4 +233,31 @@ describe('IAppliance', () => {
 			expect(() => appliance.emitResult()).not.toThrow(NotImplementedError)
 		})
 	})
+
+	describe('duckTypeProperties', () => {
+		it('should contain all properties of an IAppliance', () => {
+			const completePropertySet = new Set([
+				...IAppliance.duckTypeProperties,
+				...Object.getOwnPropertyNames(new FullyImplementedAppliance()),
+			])
+			expect(completePropertySet.size).toEqual(IAppliance.duckTypeProperties.length)
+		})
+	})
+
+	describe('isIAppliance', () => {
+		it('should properly detect an IAppliance object', () => {
+			const appliance = new FullyImplementedAppliance()
+			expect(IAppliance.isIAppliance(appliance)).toBe(true)
+		})
+		it('should properly detect a non-IAppliance object', () => {
+			const obj = {}
+			expect(IAppliance.isIAppliance(obj)).toBe(false)
+		})
+		it('should properly detect a non-IAppliance object with common fields', () => {
+			const obj = {
+				audit: () => true,
+			}
+			expect(IAppliance.isIAppliance(obj)).toBe(false)
+		})
+	})
 })

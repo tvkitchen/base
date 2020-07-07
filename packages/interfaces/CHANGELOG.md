@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Updated the minimum version of `@tvkitchen/base-constants` to `1.1.1`.
 
+### Added
+- Create `isIAppliance` duck type method to IAppliance.
+
 ## [3.0.0] - 2020-06-23
 ### Changed
 - `audit` method turned to an async method.

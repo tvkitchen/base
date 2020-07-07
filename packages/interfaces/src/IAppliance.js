@@ -1,3 +1,7 @@
+// We need to allow a second class in this file that is used for duck typing.
+// It will never be referecned, and is defined within the duck typing method.
+/* eslint-disable max-classes-per-file */
+
 import {
 	InterfaceInstantiationError,
 	NotImplementedError,
@@ -135,6 +139,37 @@ class IAppliance {
 	emitResult = (payload) => {
 		throw new NotImplementedError('emitResult')
 	}
+
+	/**
+	 * A comprehensive list of attributes that an object must have to be considered an IAppliance.
+	 *
+	 * This attribute is INTERNAL and should not be relied on; it may be removed and only exists
+	 * as an optimization to the isIAppliance method.
+	 *
+	 * @type {Array}
+	 */
+	static duckTypeProperties = (() => {
+		class Appliance extends IAppliance {} // Since IAppliance cannot be instantiated directly.
+		return Object.getOwnPropertyNames(new Appliance())
+	})()
+
+	/**
+	 * Checks whether an object is an instance of an IAppliance.
+	 *
+	 * This uses duck typing, rather than instanceof, since we can't rely on the prototype chain
+	 * matching across packages and versions.
+	 *
+	 * This method is implemented, which violates the spirit of interfaces.
+	 * Luckily, JavaScript doesn't actually know what an interface is. Also if it handled typing
+	 * in a reasonable way we wouldn't have to do this to begin with.
+	 *
+	 * @param  {Object} obj The object being tested.
+	 * @return {Boolean}     The result of the duck test.
+	 */
+	static isIAppliance = (obj) => (
+		IAppliance.duckTypeProperties
+			.every((property) => Object.prototype.hasOwnProperty.call(obj, property))
+	)
 }
 
 export default IAppliance
