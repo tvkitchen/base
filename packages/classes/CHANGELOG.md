@@ -6,6 +6,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Added
+- A static `isPayload` method to the `Payload` class.
+- A static `isPayloadArray` method to the `PayloadArray` class.
+
+### Changed
+- Update `PayloadArray` to use the `isPayload` method for validation.
 
 ## [1.2.1] - 2020-06-23
 Re-release of [1.2.0] due to accidental unpublishing.

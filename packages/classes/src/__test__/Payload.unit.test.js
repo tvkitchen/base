@@ -108,4 +108,32 @@ describe('Payload', () => {
 			expect(deserializedPayload).toEqual(payload)
 		})
 	})
+
+	describe('duckTypeProperties', () => {
+		it('should contain all properties of a Payload', () => {
+			const completePropertySet = new Set([
+				...Payload.duckTypeProperties,
+				...Object.getOwnPropertyNames(new Payload()),
+			])
+			expect(completePropertySet.size).toEqual(Payload.duckTypeProperties.length)
+		})
+	})
+
+	describe('isPayload', () => {
+		it('should properly detect a Payload object', () => {
+			const payload = new Payload()
+			expect(Payload.isPayload(payload)).toBe(true)
+		})
+		it('should properly detect a non-Payload object', () => {
+			const obj = {}
+			expect(Payload.isPayload(obj)).toBe(false)
+		})
+		it('should properly detect a non-Payload object with common fields', () => {
+			const obj = {
+				data: 'sup',
+				type: 'hello',
+			}
+			expect(Payload.isPayload(obj)).toBe(false)
+		})
+	})
 })
