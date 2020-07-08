@@ -8,6 +8,12 @@ const defaults = {
 }
 
 class Payload {
+	/**
+	 * Creates a new Payload.
+	 * If createdAt is not specified, it defaults to the current time.
+	 *
+	 * @param  {Object} properties Allow specification of properties on construction.
+	 */
 	constructor({
 		data = defaults.data,
 		type = defaults.type,
@@ -19,7 +25,7 @@ class Payload {
 		Object.assign(this, {
 			data,
 			type,
-			createdAt,
+			createdAt: createdAt || (new Date()).toISOString(),
 			timestamp,
 			duration,
 			position,

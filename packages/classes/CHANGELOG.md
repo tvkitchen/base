@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - Update `PayloadArray` to use the `isPayload` method for validation.
+- Update the default value for Payload's `createdAt` to be the current time.
 
 ## [1.2.1] - 2020-06-23
 Re-release of [1.2.0] due to accidental unpublishing.
