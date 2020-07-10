@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Changed
 - Updated the minimum version of `@tvkitchen/base-constants` to `1.1.1`.
+- Removed the unnecessarily required `emitResult` method from `IAppliance`.
 
 ### Added
 - Create `isIAppliance` duck type method to IAppliance.
