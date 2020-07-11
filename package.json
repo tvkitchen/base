@@ -33,8 +33,7 @@
     "eslint-config-airbnb-base": "^14.1.0",
     "eslint-import-resolver-alias": "^1.1.2",
     "eslint-plugin-import": "^2.20.1",
-    "jest": "^25.4.0",
-    "lerna": "^3.21.0"
+    "jest": "^25.4.0"
   },
   "engines": {
     "node": ">=13.10"
