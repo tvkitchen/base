@@ -8,5 +8,6 @@
       "statements": 100
     }
   },
-  "testPathIgnorePatterns": ["<rootDir>/packages/(?:.+?)/lib/"]
+  "testPathIgnorePatterns": ["<rootDir>/packages/(?:.+?)/lib/"],
+  "silent": true
 }
