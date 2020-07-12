@@ -6,7 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
-### Added
+
+## [1.2.0] - 2020-07-12
 - Added appliance event constants.
 
 ## [1.1.1] - 2020-06-29
@@ -29,7 +30,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `TEXT.*` data types.
 - Initial setup.
 
-[Unreleased]: https://github.com/tvkitchen/base/compare/@tvkitchen/base-constants@1.1.1...HEAD
+[Unreleased]: https://github.com/tvkitchen/base/compare/@tvkitchen/base-constants@1.2.0...HEAD
+[1.2.0]: https://github.com/tvkitchen/base/compare/@tvkitchen/base-constants@1.1.1...@tvkitchen/base-constants@1.2.0
 [1.1.1]: https://github.com/tvkitchen/base/compare/@tvkitchen/base-constants@1.1.0...@tvkitchen/base-constants@1.1.1
 [1.1.0]: https://github.com/tvkitchen/base/compare/@tvkitchen/base-constants@1.0.1...@tvkitchen/base-constants@1.1.0
 [1.0.1]: https://github.com/tvkitchen/base/compare/@tvkitchen/base-constants@1.0.0...@tvkitchen/base-constants@1.0.1
