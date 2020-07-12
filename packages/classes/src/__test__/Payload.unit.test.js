@@ -35,17 +35,38 @@ describe('Payload', () => {
 			expect(payload.duration).toBe(1000)
 			expect(payload.position).toBe(60000)
 		})
+		it('should populate a default createdAt', () => {
+			const payload = new Payload()
+			expect(payload.createdAt).not.toBe('')
+		})
+		it('should set createdAt differently for payloads created at different times', () => {
+			jest.clearAllMocks()
+			const firstMockDate = new Date(1592156234000)
+			jest.spyOn(global, 'Date').mockImplementation(() => firstMockDate)
+			const firstPayload = new Payload()
+			jest.spyOn(global, 'Date').mockRestore()
+			const secondMockDate = new Date(1592156235000)
+			jest.spyOn(global, 'Date').mockImplementation(() => secondMockDate)
+			const secondPayload = new Payload()
+			jest.spyOn(global, 'Date').mockRestore()
+			expect(firstPayload.createdAt).not.toEqual(secondPayload.createdAt)
+		})
 	})
 
 	describe('serialize', () => {
 		it('should properly should serialize data with an empty object', () => {
+			jest.clearAllMocks()
+			const mockDate = new Date(1592156234000)
+			jest.spyOn(global, 'Date').mockImplementation(() => mockDate)
 			const payload = new Payload()
+			jest.spyOn(global, 'Date').mockRestore()
 			const serializedPayload = Payload.serialize(payload)
 			expect(serializedPayload).toMatchSnapshot()
 		})
 		it('should properly should serialize data with a partially populated object', () => {
 			const parameters = {
 				data: 'I ate all of the cheese',
+				createdAt: '2020-07-08T17:28:29.032Z',
 			}
 			const payload = new Payload(parameters)
 			const serializedPayload = Payload.serialize(payload)
@@ -94,7 +115,9 @@ describe('Payload', () => {
 		it('should properly deserialize payload strings with null values', () => {
 			const serializedPayload = '{"data":"hello","type":null}'
 			const deserializedPayload = Payload.deserialize(serializedPayload)
-			expect(deserializedPayload).toMatchSnapshot()
+			expect(deserializedPayload).toMatchSnapshot({
+				createdAt: expect.any(String),
+			})
 		})
 		it('should properly deserialize a serialized payload containing buffered data', () => {
 			const data = fs.readFileSync(path.join(__dirname, '/data/thinkingface.png'))
