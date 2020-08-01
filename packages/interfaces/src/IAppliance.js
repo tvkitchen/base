@@ -47,24 +47,6 @@ class IAppliance {
 	}
 
 	/**
-	 * Getter for the list of data types accepted by the appliance.
-	 *
-	 * @return {String[]} The list of data types accepted by the appliance.
-	 */
-	getInputTypes = () => {
-		throw new NotImplementedError('getInputTypes')
-	}
-
-	/**
-	 * Getter for the list of data types produced by the appliance.
-	 *
-	 * @return {String[]} The list of data types produced by the appliance.
-	 */
-	getOutputTypes = () => {
-		throw new NotImplementedError('getOutputTypes')
-	}
-
-	/**
 	 * Asserts that a given payload is actually a payload.
    *
 	 * @param  {Payload} payload The payload that we want to validate.
@@ -159,6 +141,24 @@ class IAppliance {
 		IAppliance.duckTypeProperties
 			.every((property) => Object.prototype.hasOwnProperty.call(obj, property))
 	)
+
+	/**
+	 * Getter for the list of data types accepted by the appliance.
+	 *
+	 * @return {String[]} The list of data types accepted by the appliance.
+	 */
+	static getInputTypes = () => {
+		throw new NotImplementedError('getInputTypes')
+	}
+
+	/**
+	 * Getter for the list of data types produced by the appliance.
+	 *
+	 * @return {String[]} The list of data types produced by the appliance.
+	 */
+	static getOutputTypes = () => {
+		throw new NotImplementedError('getOutputTypes')
+	}
 }
 
 export default IAppliance
