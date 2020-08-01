@@ -18,8 +18,6 @@ class FullyImplementedAppliance extends IAppliance {
 	ingestPayload = async () => true
 
 	on = () => true
-
-	emitResult = () => true
 }
 
 export default FullyImplementedAppliance

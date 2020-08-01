@@ -130,17 +130,6 @@ class IAppliance {
 	}
 
 	/**
-	 * Called by an implemented appliance when there is data worth sharing.
-	 *
-	 * @param  {Payload} payload The result that is ready to share.
-	 * @return {Boolean}         Returns true if there are output listeners, false otherwise.
-	 */
-	// eslint-disable-next-line no-unused-vars
-	emitResult = (payload) => {
-		throw new NotImplementedError('emitResult')
-	}
-
-	/**
 	 * A comprehensive list of attributes that an object must have to be considered an IAppliance.
 	 *
 	 * This attribute is INTERNAL and should not be relied on; it may be removed and only exists
