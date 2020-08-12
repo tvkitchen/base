@@ -19,11 +19,6 @@ describe('IAppliance', () => {
 			}).toThrow(InterfaceInstantiationError)
 		})
 
-		it('should throw an error when getInputTypes() is called without implementation', () => {
-			const implementedAppliance = new PartiallyImplementedAppliance()
-			expect(() => implementedAppliance.getInputTypes()).toThrow(NotImplementedError)
-		})
-
 		it('should allow construction when extended', () => {
 			expect(() => {
 				new PartiallyImplementedAppliance() // eslint-disable-line no-new
@@ -121,18 +116,6 @@ describe('IAppliance', () => {
 		})
 	})
 
-	describe('getOutputTypes', () => {
-		it('should throw an error when called without implementation', () => {
-			const appliance = new PartiallyImplementedAppliance()
-			expect(() => appliance.getOutputTypes()).toThrow(NotImplementedError)
-		})
-
-		it('should not throw an error when called with implementation', () => {
-			const appliance = new FullyImplementedAppliance()
-			expect(() => appliance.getOutputTypes()).not.toThrow(NotImplementedError)
-		})
-	})
-
 	describe('isValidPayload', () => {
 		it('should throw an error when called without implementation', async () => {
 			const appliance = new PartiallyImplementedAppliance()
@@ -198,18 +181,6 @@ describe('IAppliance', () => {
 		})
 	})
 
-	describe('getInputTypes', () => {
-		it('should throw an error when called without implementation', () => {
-			const appliance = new PartiallyImplementedAppliance()
-			expect(() => appliance.getInputTypes()).toThrow(NotImplementedError)
-		})
-
-		it('should not throw an error when called with implementation', () => {
-			const appliance = new FullyImplementedAppliance()
-			expect(() => appliance.getInputTypes()).not.toThrow(NotImplementedError)
-		})
-	})
-
 	describe('on', () => {
 		it('should throw an error when called without implementation', () => {
 			const appliance = new PartiallyImplementedAppliance()
@@ -246,6 +217,26 @@ describe('IAppliance', () => {
 				audit: () => true,
 			}
 			expect(IAppliance.isIAppliance(obj)).toBe(false)
+		})
+	})
+
+	describe('getInputTypes', () => {
+		it('should throw an error when called without implementation', () => {
+			expect(() => PartiallyImplementedAppliance.getInputTypes()).toThrow(NotImplementedError)
+		})
+
+		it('should not throw an error when called with implementation', () => {
+			expect(() => FullyImplementedAppliance.getInputTypes()).not.toThrow(NotImplementedError)
+		})
+	})
+
+	describe('getOutputTypes', () => {
+		it('should throw an error when called without implementation', () => {
+			expect(() => PartiallyImplementedAppliance.getOutputTypes()).toThrow(NotImplementedError)
+		})
+
+		it('should not throw an error when called with implementation', () => {
+			expect(() => FullyImplementedAppliance.getOutputTypes()).not.toThrow(NotImplementedError)
 		})
 	})
 })

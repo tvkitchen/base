@@ -3,10 +3,6 @@ import IAppliance from '../../IAppliance'
 class FullyImplementedAppliance extends IAppliance {
 	audit = async () => true
 
-	getInputTypes = () => []
-
-	getOutputTypes = () => []
-
 	isValidPayload = async () => true
 
 	setup = async () => null
@@ -18,6 +14,10 @@ class FullyImplementedAppliance extends IAppliance {
 	ingestPayload = async () => true
 
 	on = () => true
+
+	static getInputTypes = () => []
+
+	static getOutputTypes = () => []
 }
 
 export default FullyImplementedAppliance
