@@ -5,9 +5,9 @@ class FullyImplementedAppliance extends IAppliance {
 
 	isValidPayload = async () => true
 
-	setup = async () => null
+	start = async () => true
 
-	teardown = async () => null
+	stop = async () => true
 
 	invoke = async () => true
 
