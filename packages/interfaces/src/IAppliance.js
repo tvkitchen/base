@@ -58,17 +58,21 @@ class IAppliance {
 	}
 
 	/**
-	 * Prepares the Appliance to process data.
+	 * Prepares the Appliance to process data and starts data processing.
+	 *
+	 * @return {Boolean} Whether the appliance successfully started.
 	 */
-	setup = async () => {
-		throw new NotImplementedError('setup')
+	start = async () => {
+		throw new NotImplementedError('start')
 	}
 
 	/**
-	 * Cleans up after processing is complete.
+	 * Stops the appliance from processing data and cleans up the appliance.
+	 *
+	 * @return {Boolean} Whether the appliance successfully stopped.
 	 */
-	teardown = async () => {
-		throw new NotImplementedError('teardown')
+	stop = async () => {
+		throw new NotImplementedError('stop')
 	}
 
 	/**
