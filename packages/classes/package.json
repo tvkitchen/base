@@ -12,5 +12,8 @@
   "module": "src/index.js",
   "publishConfig": {
     "access": "public"
+  },
+  "dependencies": {
+    "avsc": "^5.4.21"
   }
 }
