@@ -6,11 +6,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Added
+- `AvroPayload` to serialize and deserialize binary data.
 
 [1.3.0] - 2020-07-12
 
 ### Added
-- `AvroPayload` to serialize and deserialize binary data.
 - A static `isPayload` method to the `Payload` class.
 - A static `isPayloadArray` method to the `PayloadArray` class.
 
@@ -46,7 +47,8 @@ Re-release of [1.2.0] due to accidental unpublishing.
 - Initial setup.
 
 [Unreleased]: https://github.com/tvkitchen/base/compare/@tvkitchen/base-classes@1.3.0...HEAD
-[1.3.0]: https://github.com/tvkitchen/base/compare/@tvkitchen/base-classes@1.2.0...1.3.0
-[1.2.0]: https://github.com/tvkitchen/base/compare/@tvkitchen/base-classes@1.1.0...1.2.0
+[1.3.0]: https://github.com/tvkitchen/base/compare/@tvkitchen/base-classes@1.2.0...@tvkitchen/base-classes@1.3.0
+[1.2.1]: https://github.com/tvkitchen/base/compare/@tvkitchen/base-classes@1.2.0...@tvkitchen/base-classes@1.2.1
+[1.2.0]: https://github.com/tvkitchen/base/compare/@tvkitchen/base-classes@1.1.0...@tvkitchen/base-classes@1.2.0
 [1.1.0]: https://github.com/tvkitchen/base/compare/@tvkitchen/base-classes@1.0.0...@tvkitchen/base-classes@1.1.0
 [1.0.0]: https://github.com/tvkitchen/base/releases/tag/@tvkitchen/base-classes@1.0.0
