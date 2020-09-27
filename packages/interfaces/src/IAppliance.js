@@ -6,29 +6,19 @@ import {
 	InterfaceInstantiationError,
 	NotImplementedError,
 } from '@tvkitchen/base-errors'
-import {
-	logLevels,
-} from '@tvkitchen/base-constants'
 
 class IAppliance {
-	// A simple, replaceable logger for use by the Appliance.
-	logger = {
-		log: (level, message) => console.log(`${level}: ${message}`), // eslint-disable-line no-console
-		fatal: (message) => this.logger.log(logLevels.fatal, message),
-		error: (message) => this.logger.log(logLevels.error, message),
-		warn: (message) => this.logger.log(logLevels.warn, message),
-		info: (message) => this.logger.log(logLevels.info, message),
-		debug: (message) => this.logger.log(logLevels.debug, message),
-		trace: (message) => this.logger.log(logLevels.trace, message),
-	}
+	// A logger for use by the Appliance.
+	logger = null
 
 	/**
 	 * Constructor for a new appliance.
 	 *
-	 * @param  {Object} overrideSettings Values to override default appliance settings.
+   * @param  {Object} settings        Values to override default appliance settings.
+   * @param  {Object} settings.logger The logger to use.
 	 */
 	// eslint-disable-next-line no-unused-vars
-	constructor(overrideSettings = {}) {
+	constructor(settings = {}) {
 		if (this.constructor === IAppliance) {
 			throw new InterfaceInstantiationError(this.constructor.name)
 		}
