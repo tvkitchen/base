@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Removed
 - `IAppliance` no longer has a functioning logger, just a reference to the need for a logger.
 
+### Changed
+- `IAppliance` now extends NodeJS's `stream.Transform`, which means Appliances function as streams instead of simple event emitters.
+
 ## [4.0.0-alpha.2]
 ### Changed
 - Renamed `setup` to `start` and changed its return type.

@@ -2,12 +2,13 @@
 // It will never be referecned, and is defined within the duck typing method.
 /* eslint-disable max-classes-per-file */
 
+import { Transform } from 'stream'
 import {
 	InterfaceInstantiationError,
 	NotImplementedError,
 } from '@tvkitchen/base-errors'
 
-class IAppliance {
+class IAppliance extends Transform {
 	// A logger for use by the Appliance.
 	logger = null
 
@@ -17,8 +18,11 @@ class IAppliance {
    * @param  {Object} settings        Values to override default appliance settings.
    * @param  {Object} settings.logger The logger to use.
 	 */
-	// eslint-disable-next-line no-unused-vars
 	constructor(settings = {}) {
+		super({
+			...settings,
+			objectMode: true,
+		})
 		if (this.constructor === IAppliance) {
 			throw new InterfaceInstantiationError(this.constructor.name)
 		}
@@ -91,18 +95,11 @@ class IAppliance {
 		throw new NotImplementedError('ingestPayload')
 	}
 
-	/**
-	 * Registers a listener to the appliance for a given event type.
-	 *
-	 * Event types are listed in constants/events.js
-	 *
-	 * @param  {String} eventType  The type of event being listened to.
-	 * @param  {Function} listener The listener to be registered for that event.
-	 * @return {EventEmitter}      The EventEmitter (so events can be chained).
-	 */
-	// eslint-disable-next-line no-unused-vars
-	on = (eventType, listener) => {
-		throw new NotImplementedError('on')
+	/** @inheritdoc */
+	_transform = (chunk, encoding, callback) => {
+		this.ingestPayload(chunk)
+			.then(() => callback())
+			.catch((error) => callback(error))
 	}
 
 	/**

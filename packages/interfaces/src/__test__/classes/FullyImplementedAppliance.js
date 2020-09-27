@@ -13,8 +13,6 @@ class FullyImplementedAppliance extends IAppliance {
 
 	ingestPayload = async () => true
 
-	on = () => true
-
 	static getInputTypes = () => []
 
 	static getOutputTypes = () => []
