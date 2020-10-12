@@ -1,7 +1,7 @@
 {
   "name": "@tvkitchen/base-interfaces",
   "description": "Interfaces for modular components of the TV Kitchen.",
-  "version": "4.0.0-alpha.2",
+  "version": "4.0.0-alpha.3",
   "repository": {
     "type": "git",
     "url": "https://github.com/tvkitchen/base.git",

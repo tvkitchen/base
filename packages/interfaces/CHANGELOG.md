@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [4.0.0-alpha.3]
 ### Removed
 - `IAppliance` no longer has a functioning logger, just a reference to the need for a logger.
 
@@ -51,10 +53,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `IAppliance` core interface.
 - Initial setup.
 
-[Unreleased]: https://github.com/tvkitchen/base/compare/@tvkitchen/base-interfaces@4.0.0-alpha.2...HEAD
-[4.0.0-alpha.2]: https://github.com/tvkitchen/base/compare/@tvkitchen/base-interfaces@4.0.0-alpha.1...4.0.0-alpha.2
-[4.0.0-alpha.1]: https://github.com/tvkitchen/base/compare/@tvkitchen/base-interfaces@3.0.0...4.0.0-alpha.1
-[3.0.0]: https://github.com/tvkitchen/base/compare/@tvkitchen/base-interfaces@2.0.0...@tvkitchen/base-interfaces@3.0.0
-[2.0.0]: https://github.com/tvkitchen/base/compare/@tvkitchen/base-interfaces@1.0.1...@tvkitchen/base-interfaces@2.0.0
-[1.0.1]: https://github.com/tvkitchen/base/compare/@tvkitchen/base-interfaces@1.0.0...@tvkitchen/base-interfaces@1.0.1
+[Unreleased]: https://github.com/tvkitchen/base/compare/@tvkitchen/base-interfaces@4.0.0-alpha.3...HEAD
+[4.0.0-alpha.3]: https://github.com/tvkitchen/base/releases/tag/@tvkitchen/base-interfaces@4.0.0-alpha.3
+[4.0.0-alpha.2]: https://github.com/tvkitchen/base/releases/tag/@tvkitchen/base-interfaces@4.0.0-alpha.2
+[4.0.0-alpha.1]: https://github.com/tvkitchen/base/releases/tag/@tvkitchen/base-interfaces@4.0.0-alpha.1
+[3.0.0]: https://github.com/tvkitchen/base/releases/tag/@tvkitchen/base-interfaces@3.0.0
+[2.0.0]: https://github.com/tvkitchen/base/releases/tag/@tvkitchen/base-interfaces@2.0.0
+[1.0.1]: https://github.com/tvkitchen/base/releases/tag/@tvkitchen/base-interfaces@1.0.1
 [1.0.0]: https://github.com/tvkitchen/base/releases/tag/@tvkitchen/base-interfaces@1.0.0
