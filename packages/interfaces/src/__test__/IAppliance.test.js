@@ -111,18 +111,6 @@ describe('IAppliance', () => {
 		})
 	})
 
-	describe('on', () => {
-		it('should throw an error when called without implementation', () => {
-			const appliance = new PartiallyImplementedAppliance()
-			expect(() => appliance.on()).toThrow(NotImplementedError)
-		})
-
-		it('should not throw an error when called with implementation', () => {
-			const appliance = new FullyImplementedAppliance()
-			expect(() => appliance.on()).not.toThrow(NotImplementedError)
-		})
-	})
-
 	describe('duckTypeProperties', () => {
 		it('should contain all properties of an IAppliance', () => {
 			const completePropertySet = new Set([
