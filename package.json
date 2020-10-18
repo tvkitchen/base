@@ -4,7 +4,7 @@
   "description": "Interface-level abstract definitions, DTOs, type definitions for use across TV Kitchen components.",
   "repository": "git@github.com:tvkitchen/base.git",
   "author": "Bad Idea Factory <biffuddotcom@biffud.com>",
-  "license": "Apache-2.0",
+  "license": "LGPL-3.0",
   "scripts": {
     "build": "yarn workspaces run babel --root-mode upward src -d lib",
     "lint": "eslint .",
