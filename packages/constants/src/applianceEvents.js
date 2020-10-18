@@ -1,6 +1,0 @@
-export const STARTING = 'starting'
-export const READY = 'ready'
-export const ERROR = 'error'
-export const PAYLOAD = 'payload'
-export const STOPPING = 'stopping'
-export const STOPPED = 'stopped'
