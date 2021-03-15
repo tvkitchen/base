@@ -173,6 +173,30 @@ describe('PayloadArray', () => {
 		})
 	})
 
+	describe('getPosition', () => {
+		it('should return the position of the earliest payload', () => {
+			const payloadArray = new PayloadArray()
+			payloadArray.insert(new Payload({ position: 2000 }))
+			payloadArray.insert(new Payload({ position: 1000 }))
+			expect(payloadArray.getPosition()).toBe(1000)
+		})
+	})
+	describe('getTimestamp', () => {
+		it('should return the timestamp of the earliest payload', () => {
+			const payloadArray = new PayloadArray()
+			payloadArray.insert(new Payload({ position: 0, timestamp: '2021-03-15T04:05:12.634Z' }))
+			expect(payloadArray.getTimestamp()).toBe('2021-03-15T04:05:12.634Z')
+		})
+	})
+	describe('getDuration', () => {
+		it('should return the full duration of all payloads', () => {
+			const payloadArray = new PayloadArray()
+			payloadArray.insert(new Payload({ position: 4000, duration: 5 }))
+			payloadArray.insert(new Payload({ position: 6000, duration: 3 }))
+			expect(payloadArray.getDuration()).toBe(2003)
+		})
+	})
+
 	describe('duckTypeProperties', () => {
 		it('should contain all properties of a PayloadArray', () => {
 			const completePropertySet = new Set([

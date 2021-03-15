@@ -30,6 +30,15 @@ class PayloadArray {
 	}
 
 	/**
+	 * Remove all payloads from the PayloadArray.
+	 *
+	 * @return {null}
+	 */
+	empty() {
+		this.payloads = []
+	}
+
+	/**
 	 * Find the index to which a payload with a given position would be inserted.
 	 *
 	 * @param  {Number}  position      The position being searched for.
@@ -80,6 +89,35 @@ class PayloadArray {
 	 * @return {Array} The resulting Array.
 	 */
 	toArray = () => [...this.payloads]
+
+	/**
+	 * Get the earliest position represented in this PayloadArray.
+	 *
+	 * @return {Number} The position of the first payload.
+	 */
+	getPosition() {
+		return this.payloads[0].position
+	}
+
+	/**
+	 * Get the earliest timestamp represented in this PayloadArray.
+	 *
+	 * @return {String} The ISO string of the first payload's timestamp
+	 */
+	getTimestamp() {
+		return this.payloads[0].timestamp
+	}
+
+	/**
+	 * Get the duration represented by this PayloadArray.
+	 *
+	 * @return {Number} The duration covered by this PayloadArray
+	 */
+	getDuration() {
+		const firstPayload = this.payloads[0]
+		const [lastPayload] = this.payloads.slice(-1)
+		return lastPayload.position - firstPayload.position + lastPayload.duration
+	}
 
 	/**
 	 * A comprehensive list of attributes that an object must have to be considered a PayloadArray.
