@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- `Payload` now has two helper methods for setting and accessing `String` and `Object` data that has been stored in the `data` attribute.
+
 ## [1.4.0-alpha.1] - 2020-09-09
 ### Added
 - `AvroPayload` to serialize and deserialize binary data.

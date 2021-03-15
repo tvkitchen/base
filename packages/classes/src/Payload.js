@@ -71,6 +71,36 @@ class Payload {
 		Payload.duckTypeProperties
 			.every((property) => Object.prototype.hasOwnProperty.call(obj, property))
 	)
+
+	/**
+	 * Extracts and returns an object that has been stringified within the payload data.
+	 */
+	getDataObject() {
+		return JSON.parse(this.data.toString())
+	}
+
+	/**
+	 * Extracts and returns a string value from payload data.
+	 */
+	getDataString() {
+		return this.data.toString()
+	}
+
+	/**
+	 * Converts a simple object to a buffer and assigns it to payload data.
+	 *
+	 * The object must be serializable via JSON.stringify / JSON.parse
+	 */
+	setDataObject(obj) {
+		this.data = Buffer.from(JSON.stringify(obj))
+	}
+
+	/**
+	 * Converts a string to a buffer and assigns it to the payload data.
+	 */
+	setDataString(str) {
+		this.data = Buffer.from(str)
+	}
 }
 
 export default Payload
