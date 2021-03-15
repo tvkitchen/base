@@ -32,3 +32,15 @@ For example, if a stream started at 12:00 GMT on March 15th, 2020, a Payload con
 	"position": 120000,
 }
 ```
+
+## Methods
+
+Payload data is a buffer, but can contain more meaningful data (e.g. a `String` or `JSON Stringified Object`). To make accessing this kind of data easier, Payload has two helper getters.  These can be called on payloads whose types are documented to include that data.
+
+- `getDataObject`: Extracts and returns an object that has been stringified within the payload data.
+- `getDataString`: Extracts and returns a string value from payload data.
+
+There are also setters for these types.
+
+- `setDataObject`: Converts a simple object to a buffer and assigns it to payload data.
+- `setDataString`: Converts a string to a buffer and assigns it to the payload data.

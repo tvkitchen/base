@@ -159,4 +159,44 @@ describe('Payload', () => {
 			expect(Payload.isPayload(obj)).toBe(false)
 		})
 	})
+
+	describe('getDataObject', () => {
+		it('should return the object representation of stringified json', () => {
+			const dataObject = { a: 'hello' }
+			const payload = new Payload({
+				data: Buffer.from(JSON.stringify(dataObject)),
+			})
+			expect(payload.getDataObject()).toEqual(dataObject)
+		})
+	})
+
+	describe('getDataString', () => {
+		it('should return the buffered string', () => {
+			const dataString = 'hello'
+			const payload = new Payload({
+				data: Buffer.from(dataString),
+			})
+			expect(payload.getDataString()).toEqual(dataString)
+		})
+	})
+
+	describe('setDataObject', () => {
+		it('should store an object in a form that can be deserialized', () => {
+			const dataObject = { a: 'hello' }
+			const payload = new Payload()
+			payload.setDataObject(dataObject)
+			expect(payload.data instanceof Buffer).toBe(true)
+			expect(JSON.parse(payload.data.toString())).toEqual(dataObject)
+		})
+	})
+
+	describe('setDataString', () => {
+		it('should return the buffered string', () => {
+			const dataString = 'hello'
+			const payload = new Payload()
+			payload.setDataString(dataString)
+			expect(payload.data instanceof Buffer).toBe(true)
+			expect(payload.data.toString()).toEqual(dataString)
+		})
+	})
 })
