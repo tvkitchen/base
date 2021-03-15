@@ -21,3 +21,7 @@ PayloadArrays have the following methods:
 - `filterByType(type)`: Create a new PayloadArray containing only Payloads of the specified type.
 - `filterByPosition(start, end?)`: Create a new PayloadArray containing only Payloads that exist within a specified duration.
 - `toArray()`: Copy the content of the PayloadArray to a vanilla Array.
+- `empty()`: Remove all payloads from the PayloadArray.
+- `getPosition()`: Get the earliest position represented in this PayloadArray.
+- `getTimestamp()`: Get the earliest timestamp represented in this PayloadArray.
+- `getDuration()`: Get the duration represented by this PayloadArray.

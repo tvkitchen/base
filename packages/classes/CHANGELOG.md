@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - `Payload` now has two helper methods for setting and accessing `String` and `Object` data that has been stored in the `data` attribute.
+- `PayloadArray` now has several methods making it easier to access the position, timestamp, and duration represented by the collection of Payloads contained.
 
 ## [1.4.0-alpha.1] - 2020-09-09
 ### Added
