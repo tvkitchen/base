@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.4.0-alpha.2] - 2021-04-07
 ### Added
 - `Payload` now has two helper methods for setting and accessing `String` and `Object` data that has been stored in the `data` attribute.
 - `PayloadArray` now has several methods making it easier to access the position, timestamp, and duration represented by the collection of Payloads contained.
@@ -28,7 +29,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 Re-release of [1.2.0] due to accidental unpublishing.
 
 ## [1.2.0] - 2020-06-23
-
 ### Added
 - A sortedArray `sortedIndexBy` utility method.
 - Definition of the `PayloadArray` class.
@@ -37,7 +37,6 @@ Re-release of [1.2.0] due to accidental unpublishing.
 - Cleanup of `Payload` unit test names.
 
 ## [1.1.0] - 2020-06-05
-
 ### Added
 - Added time attributes to `Payload`.
 - Added documentation for `Payload`.
@@ -46,15 +45,15 @@ Re-release of [1.2.0] due to accidental unpublishing.
 - Improved package description.
 
 ## [1.0.0] - 2020-05-27
-
 ### Added
 - Definition of the `Payload` class.
 - Initial setup.
 
-[Unreleased]: https://github.com/tvkitchen/base/compare/@tvkitchen/base-classes@1.4.0-alpha.1...HEAD
-[1.4.0-alpha.1]: https://github.com/tvkitchen/base/compare/@tvkitchen/base-classes@1.3.0...base-classes@1.4.0-alpha.1
-[1.3.0]: https://github.com/tvkitchen/base/compare/@tvkitchen/base-classes@1.2.0...@tvkitchen/base-classes@1.3.0
-[1.2.1]: https://github.com/tvkitchen/base/compare/@tvkitchen/base-classes@1.2.0...@tvkitchen/base-classes@1.2.1
-[1.2.0]: https://github.com/tvkitchen/base/compare/@tvkitchen/base-classes@1.1.0...@tvkitchen/base-classes@1.2.0
-[1.1.0]: https://github.com/tvkitchen/base/compare/@tvkitchen/base-classes@1.0.0...@tvkitchen/base-classes@1.1.0
+[Unreleased]: https://github.com/tvkitchen/base/compare/@tvkitchen/base-classes@1.4.0-alpha.2...HEAD
+[1.4.0-alpha.2]: https://github.com/tvkitchen/base/releases/tag/@tvkitchen/base-classes@1.4.0-alpha.2
+[1.4.0-alpha.1]: https://github.com/tvkitchen/base/releases/tag/@tvkitchen/base-classes@1.4.0-alpha.1
+[1.3.0]: https://github.com/tvkitchen/base/releases/tag/@tvkitchen/base-classes@1.3.0
+[1.2.1]: https://github.com/tvkitchen/base/releases/tag/@tvkitchen/base-classes@1.2.1
+[1.2.0]: https://github.com/tvkitchen/base/releases/tag/@tvkitchen/base-classes@1.2.0
+[1.1.0]: https://github.com/tvkitchen/base/releases/tag/@tvkitchen/base-classes@1.1.0
 [1.0.0]: https://github.com/tvkitchen/base/releases/tag/@tvkitchen/base-classes@1.0.0
