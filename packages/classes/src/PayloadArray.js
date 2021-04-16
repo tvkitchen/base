@@ -45,12 +45,14 @@ class PayloadArray {
 	 * @param  {Boolean} returnHighest Whether to return the lowest (false) or highest (true) index.
 	 * @return {Number}          The index of the item, or the PayloadArray length.
 	 */
-	indexOfPosition = (position, returnHighest = false) => sortedIndexBy(
-		this.payloads,
-		position,
-		(payload) => payload.position,
-		returnHighest,
-	)
+	indexOfPosition(position, returnHighest = false) {
+		return sortedIndexBy(
+			this.payloads,
+			position,
+			(payload) => payload.position,
+			returnHighest,
+		)
+	}
 
 	/**
 	 * Create a new PayloadArray containing only Payloads of the specified type.
@@ -58,7 +60,7 @@ class PayloadArray {
 	 * @param  {String} type  The type of payload to include in the new PayloadArray.
 	 * @return {PayloadArray} A filtered PayloadArray.
 	 */
-	filterByType = (type) => {
+	filterByType(type) {
 		const filteredPayloadArray = new PayloadArray()
 		const typeStem = type.endsWith('.ANY') ? type.slice(0, -3) : type
 		filteredPayloadArray.payloads = this.payloads.filter(
@@ -75,7 +77,7 @@ class PayloadArray {
 	 *                        include the remainder of the array.
 	 * @return {PayloadArray} A filtered PayloadArray.
 	 */
-	filterByPosition = (start, end = null) => {
+	filterByPosition(start, end = null) {
 		const left = this.indexOfPosition(start)
 		const right = (end === null) ? this.payloads.length : this.indexOfPosition(end, true)
 		const filteredPayloadArray = new PayloadArray()
@@ -88,7 +90,7 @@ class PayloadArray {
 	 *
 	 * @return {Array} The resulting Array.
 	 */
-	toArray = () => [...this.payloads]
+	toArray() { return [...this.payloads] }
 
 	/**
 	 * Get the earliest position represented in this PayloadArray.
@@ -138,10 +140,10 @@ class PayloadArray {
 	 * @param  {Object} obj The object being tested.
 	 * @return {Boolean}     The result of the duck test.
 	 */
-	static isPayloadArray = (obj) => (
-		PayloadArray.duckTypeProperties
+	static isPayloadArray(obj) {
+		return PayloadArray.duckTypeProperties
 			.every((property) => Object.prototype.hasOwnProperty.call(obj, property))
-	)
+	}
 }
 
 export { PayloadArray }
