@@ -15,4 +15,4 @@ class AbstractInstantiationError extends Error {
 	}
 }
 
-export default AbstractInstantiationError
+export { AbstractInstantiationError }

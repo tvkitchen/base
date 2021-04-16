@@ -15,4 +15,4 @@ class InterfaceInstantiationError extends Error {
 	}
 }
 
-export default InterfaceInstantiationError
+export { InterfaceInstantiationError }

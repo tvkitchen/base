@@ -103,4 +103,4 @@ class Payload {
 	}
 }
 
-export default Payload
+export { Payload }
