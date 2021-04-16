@@ -5,8 +5,8 @@ AvroPayload {
   "createdAt": "2020-02-02T03:04:05.000Z",
   "data": "I ate all of the cheese",
   "duration": 1000,
+  "origin": "2020-02-02T03:04:01.000Z",
   "position": 60000,
-  "timestamp": "2020-02-02T03:04:01.000Z",
   "type": "CONFESSION",
 }
 `;
@@ -16,8 +16,8 @@ Object {
   "createdAt": Any<String>,
   "data": "hello",
   "duration": 0,
+  "origin": "",
   "position": 0,
-  "timestamp": "",
   "type": null,
 }
 `;

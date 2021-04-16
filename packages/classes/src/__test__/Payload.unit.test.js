@@ -22,7 +22,7 @@ describe('Payload', () => {
 				data: 'I ate all of the cheese',
 				type: 'CONFESSION',
 				createdAt: '2020-02-02T03:04:05.000Z',
-				timestamp: '2020-02-02T03:04:01.000Z',
+				origin: '2020-02-02T03:04:01.000Z',
 				duration: 1000,
 				position: 60000,
 			}
@@ -31,7 +31,7 @@ describe('Payload', () => {
 			expect(payload.data).toBe('I ate all of the cheese')
 			expect(payload.type).toBe('CONFESSION')
 			expect(payload.createdAt).toEqual('2020-02-02T03:04:05.000Z')
-			expect(payload.timestamp).toEqual('2020-02-02T03:04:01.000Z')
+			expect(payload.origin).toEqual('2020-02-02T03:04:01.000Z')
 			expect(payload.duration).toBe(1000)
 			expect(payload.position).toBe(60000)
 		})
@@ -77,7 +77,7 @@ describe('Payload', () => {
 				data: 'I ate all of the cheese',
 				type: 'CONFESSION',
 				createdAt: '2020-02-02T03:04:05.000Z',
-				timestamp: '2020-02-02T03:04:01.000Z',
+				origin: '2020-02-02T03:04:01.000Z',
 				duration: 1000,
 				position: 60000,
 			}
@@ -103,7 +103,7 @@ describe('Payload', () => {
 				data: 'I ate all of the cheese',
 				type: 'CONFESSION',
 				createdAt: '2020-02-02T03:04:05.000Z',
-				timestamp: '2020-02-02T03:04:01.000Z',
+				origin: '2020-02-02T03:04:01.000Z',
 				duration: 1000,
 				position: 60000,
 			}

@@ -100,12 +100,12 @@ class PayloadArray {
 	}
 
 	/**
-	 * Get the earliest timestamp represented in this PayloadArray.
+	 * Get the origin timestamp of this PayloadArray.
 	 *
-	 * @return {String} The ISO string of the first payload's timestamp
+	 * @return {String} The ISO string of the first payload's origin
 	 */
-	getTimestamp() {
-		return this.payloads[0].timestamp
+	getOrigin() {
+		return this.payloads[0].origin
 	}
 
 	/**

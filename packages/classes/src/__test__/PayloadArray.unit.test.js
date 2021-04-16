@@ -181,11 +181,11 @@ describe('PayloadArray', () => {
 			expect(payloadArray.getPosition()).toBe(1000)
 		})
 	})
-	describe('getTimestamp', () => {
-		it('should return the timestamp of the earliest payload', () => {
+	describe('getOrigin', () => {
+		it('should return the origin of the earliest payload', () => {
 			const payloadArray = new PayloadArray()
-			payloadArray.insert(new Payload({ position: 0, timestamp: '2021-03-15T04:05:12.634Z' }))
-			expect(payloadArray.getTimestamp()).toBe('2021-03-15T04:05:12.634Z')
+			payloadArray.insert(new Payload({ position: 0, origin: '2021-03-15T04:05:12.634Z' }))
+			expect(payloadArray.getOrigin()).toBe('2021-03-15T04:05:12.634Z')
 		})
 	})
 	describe('getDuration', () => {
