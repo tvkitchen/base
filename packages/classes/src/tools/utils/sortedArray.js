@@ -1,4 +1,3 @@
-/* eslint-disable import/prefer-default-export */
 /**
  * Find the index within a sorted array to which a given value could be inserted while
  * still maintaining order.

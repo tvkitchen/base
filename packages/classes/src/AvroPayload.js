@@ -1,5 +1,5 @@
 import avro from 'avsc'
-import Payload from './Payload'
+import { Payload } from './Payload'
 
 const AVRO_TYPES = {
 	RECORD: 'record',
@@ -36,4 +36,4 @@ class AvroPayload extends Payload {
 	)
 }
 
-export default AvroPayload
+export { AvroPayload }

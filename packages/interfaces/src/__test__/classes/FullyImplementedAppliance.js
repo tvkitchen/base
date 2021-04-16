@@ -1,4 +1,4 @@
-import IAppliance from '../../IAppliance'
+import { IAppliance } from '../..'
 
 class FullyImplementedAppliance extends IAppliance {
 	audit = async () => true
@@ -18,4 +18,4 @@ class FullyImplementedAppliance extends IAppliance {
 	static getOutputTypes = () => []
 }
 
-export default FullyImplementedAppliance
+export { FullyImplementedAppliance }

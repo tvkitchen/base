@@ -152,4 +152,4 @@ class IAppliance extends Transform {
 	}
 }
 
-export default IAppliance
+export { IAppliance }

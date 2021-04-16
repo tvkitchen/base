@@ -1,5 +1,5 @@
 import { sortedIndexBy } from './tools/utils/sortedArray'
-import Payload from './Payload'
+import { Payload } from './Payload'
 
 /**
  * PayloadArray stores a series of Payloads in a data structure that allows for easy filtering
@@ -144,4 +144,4 @@ class PayloadArray {
 	)
 }
 
-export default PayloadArray
+export { PayloadArray }

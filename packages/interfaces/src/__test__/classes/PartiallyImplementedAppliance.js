@@ -1,5 +1,5 @@
-import IAppliance from '../../IAppliance'
+import { IAppliance } from '../..'
 
 class PartiallyImplementedAppliance extends IAppliance { }
 
-export default PartiallyImplementedAppliance
+export { PartiallyImplementedAppliance }
