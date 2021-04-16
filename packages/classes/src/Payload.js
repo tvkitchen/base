@@ -1,31 +1,16 @@
-const defaults = {
-	data: null,
-	type: null,
-	createdAt: '',
-	origin: '',
-	duration: 0,
-	position: 0,
-}
-
 class Payload {
-	/**
-	 * Creates a new Payload.
-	 * If createdAt is not specified, it defaults to the current time.
-	 *
-	 * @param  {Object} properties Allow specification of properties on construction.
-	 */
 	constructor({
-		data = defaults.data,
-		type = defaults.type,
-		createdAt = defaults.createdAt,
-		origin = defaults.origin,
-		duration = defaults.duration,
-		position = defaults.position,
-	} = defaults) {
+		data = null,
+		type = null,
+		createdAt = (new Date()).toISOString(),
+		origin = '',
+		duration = 0,
+		position = 0,
+	} = {}) {
 		Object.assign(this, {
 			data,
 			type,
-			createdAt: createdAt || (new Date()).toISOString(),
+			createdAt,
 			origin,
 			duration,
 			position,
