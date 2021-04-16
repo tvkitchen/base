@@ -2,7 +2,7 @@ const defaults = {
 	data: null,
 	type: null,
 	createdAt: '',
-	timestamp: '',
+	origin: '',
 	duration: 0,
 	position: 0,
 }
@@ -18,7 +18,7 @@ class Payload {
 		data = defaults.data,
 		type = defaults.type,
 		createdAt = defaults.createdAt,
-		timestamp = defaults.timestamp,
+		origin = defaults.origin,
 		duration = defaults.duration,
 		position = defaults.position,
 	} = defaults) {
@@ -26,7 +26,7 @@ class Payload {
 			data,
 			type,
 			createdAt: createdAt || (new Date()).toISOString(),
-			timestamp,
+			origin,
 			duration,
 			position,
 		})

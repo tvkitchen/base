@@ -23,5 +23,5 @@ PayloadArrays have the following methods:
 - `toArray()`: Copy the content of the PayloadArray to a vanilla Array.
 - `empty()`: Remove all payloads from the PayloadArray.
 - `getPosition()`: Get the earliest position represented in this PayloadArray.
-- `getTimestamp()`: Get the earliest timestamp represented in this PayloadArray.
+- `getOrigin()`: Get the origin (ISO timestamp) of the data represented in this PayloadArray.
 - `getDuration()`: Get the duration represented by this PayloadArray.

@@ -27,7 +27,7 @@ describe('AvroPayload', () => {
 				data: 'I ate all of the cheese',
 				type: 'CONFESSION',
 				createdAt: '2020-02-02T03:04:05.000Z',
-				timestamp: '2020-02-02T03:04:01.000Z',
+				origin: '2020-02-02T03:04:01.000Z',
 				duration: 1000,
 				position: 60000,
 			}
@@ -53,7 +53,7 @@ describe('AvroPayload', () => {
 				data: 'I ate all of the cheese',
 				type: 'CONFESSION',
 				createdAt: '2020-02-02T03:04:05.000Z',
-				timestamp: '2020-02-02T03:04:01.000Z',
+				origin: '2020-02-02T03:04:01.000Z',
 				duration: 1000,
 				position: 60000,
 			}
