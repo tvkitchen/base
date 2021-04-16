@@ -1,6 +1,6 @@
 # TV Kitchen Data Types
 
-The [dataTypes.js](src/constants/dataTypes.js) constant file contains the list of standard types of data that the TV Kitchen and its appliances can produce.
+The [dataTypes.js](packages/constants/src/dataTypes.js) file contains the list of standard types of data that the TV Kitchen and its appliances can produce.
 
 Someone creating a new appliance **is not bound to this list** and can invent new data types that their network of appliances might work with, it just won't be considered a standard data type unless it appears in this constants list.
 
