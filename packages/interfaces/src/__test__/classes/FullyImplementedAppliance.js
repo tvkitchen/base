@@ -1,21 +1,23 @@
+// This is a test class so we can ignore the opinionated method requirements
+/* eslint-disable class-methods-use-this */
 import { IAppliance } from '../..'
 
 class FullyImplementedAppliance extends IAppliance {
-	audit = async () => true
+	async audit() { return true }
 
-	isValidPayload = async () => true
+	async isValidPayload() { return true }
 
-	start = async () => true
+	async start() { return true }
 
-	stop = async () => true
+	async stop() { return true }
 
-	invoke = async () => true
+	async invoke() { return true }
 
-	ingestPayload = async () => true
+	async ingestPayload() { return true }
 
-	static getInputTypes = () => []
+	static getInputTypes() { return [] }
 
-	static getOutputTypes = () => []
+	static getOutputTypes() { return [] }
 }
 
 export { FullyImplementedAppliance }

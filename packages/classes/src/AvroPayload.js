@@ -27,13 +27,16 @@ const payloadType = avro.Type.forSchema({
 })
 
 class AvroPayload extends Payload {
-	static serialize = (payload) => payloadType.toBuffer(payload)
+	static serialize(payload) {
+		return payloadType.toBuffer(payload)
+	}
 
-	static deserialize = (serializedPayload) => (
-		typeof serializedPayload === 'string'
-			? super.deserialize(serializedPayload)
-			: new AvroPayload(payloadType.fromBuffer(serializedPayload))
-	)
+	static deserialize(serializedPayload) {
+		if (typeof serializedPayload === 'string') {
+			return super.deserialize(serializedPayload)
+		}
+		return new AvroPayload(payloadType.fromBuffer(serializedPayload))
+	}
 }
 
 export { AvroPayload }

@@ -17,9 +17,11 @@ class Payload {
 		})
 	}
 
-	static serialize = (payload) => JSON.stringify(payload)
+	static serialize(payload) {
+		return JSON.stringify(payload)
+	}
 
-	static deserialize = (serializedPayload) => {
+	static deserialize(serializedPayload) {
 		const deserializedPayload = JSON.parse(serializedPayload, (key, value) => {
 			if (typeof value === 'object'
 					&& value != null) {
@@ -52,10 +54,10 @@ class Payload {
 	 * @param  {Object}  obj The object being tested.
 	 * @return {Boolean}     The result of the duck test.
 	 */
-	static isPayload = (obj) => (
-		Payload.duckTypeProperties
+	static isPayload(obj) {
+		return Payload.duckTypeProperties
 			.every((property) => Object.prototype.hasOwnProperty.call(obj, property))
-	)
+	}
 
 	/**
 	 * Extracts and returns an object that has been stringified within the payload data.

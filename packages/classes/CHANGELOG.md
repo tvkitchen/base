@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `Payload` and `AvroPayload` now has an `originTimestamp` attribute.
 - `Payload` and `AvroPayload` no longer has a `timestamp` attribute.
 - `PayloadArray` has replaced `getTimestamp()` with `getOrigin()`.
+- Class methods are no longer arrow functions.
 
 ## [1.4.0-alpha.2] - 2021-04-07
 ### Added
