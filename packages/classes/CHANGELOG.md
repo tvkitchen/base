@@ -57,7 +57,7 @@ Re-release of [1.2.0] due to accidental unpublishing.
 - Initial setup.
 
 [Unreleased]: https://github.com/tvkitchen/base/compare/@tvkitchen/base-classes@2.0.0-alpha.1...HEAD
-[2.0.0-alpha.1]: https://github.com/tvkitchen/base/releases/tag/@tvkitchen/base-classes@1.4.0-alpha.1
+[2.0.0-alpha.1]: https://github.com/tvkitchen/base/releases/tag/@tvkitchen/base-classes@2.0.0-alpha.1
 [1.4.0-alpha.2]: https://github.com/tvkitchen/base/releases/tag/@tvkitchen/base-classes@1.4.0-alpha.2
 [1.4.0-alpha.1]: https://github.com/tvkitchen/base/releases/tag/@tvkitchen/base-classes@1.4.0-alpha.1
 [1.3.0]: https://github.com/tvkitchen/base/releases/tag/@tvkitchen/base-classes@1.3.0
