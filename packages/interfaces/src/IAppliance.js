@@ -2,6 +2,9 @@
 // It will never be referecned, and is defined within the duck typing method.
 /* eslint-disable max-classes-per-file */
 
+// This is defining method stubs meant to be overridden.
+/* eslint-disable class-methods-use-this */
+
 import { Transform } from 'stream'
 import {
 	InterfaceInstantiationError,
@@ -36,7 +39,7 @@ class IAppliance extends Transform {
 	 *
 	 * @return {Boolean} Whether the dependencies and configurations properly exist.
 	 */
-	audit = async () => {
+	async audit() {
 		throw new NotImplementedError('audit')
 	}
 
@@ -47,7 +50,7 @@ class IAppliance extends Transform {
 	 * @return {Boolean}         The result of the validation check.
 	 */
 	// eslint-disable-next-line no-unused-vars
-	isValidPayload = async (payload) => {
+	async isValidPayload(payload) {
 		throw new NotImplementedError('isValidPayload')
 	}
 
@@ -56,7 +59,7 @@ class IAppliance extends Transform {
 	 *
 	 * @return {Boolean} Whether the appliance successfully started.
 	 */
-	start = async () => {
+	async start() {
 		throw new NotImplementedError('start')
 	}
 
@@ -65,7 +68,7 @@ class IAppliance extends Transform {
 	 *
 	 * @return {Boolean} Whether the appliance successfully stopped.
 	 */
-	stop = async () => {
+	async stop() {
 		throw new NotImplementedError('stop')
 	}
 
@@ -78,7 +81,7 @@ class IAppliance extends Transform {
 	 * @return {PayloadArray}         Leftover Payloads that still need to be processed.
 	 */
 	// eslint-disable-next-line no-unused-vars
-	invoke = async (payloads) => {
+	async invoke(payloads) {
 		throw new NotImplementedError('invoke')
 	}
 
@@ -91,12 +94,13 @@ class IAppliance extends Transform {
 	 * @throws {AssertionError} when passed an invalid payload for this appliance.
 	 */
 	// eslint-disable-next-line no-unused-vars
-	ingestPayload = async (payload) => {
+	async ingestPayload(payload) {
 		throw new NotImplementedError('ingestPayload')
 	}
 
 	/** @inheritdoc */
-	_transform = (chunk, encoding, callback) => {
+	// eslint-disable-next-line no-underscore-dangle
+	async _transform(chunk, encoding, callback) {
 		this.ingestPayload(chunk)
 			.then(() => callback())
 			.catch((error) => callback(error))
@@ -128,17 +132,17 @@ class IAppliance extends Transform {
 	 * @param  {Object} obj The object being tested.
 	 * @return {Boolean}     The result of the duck test.
 	 */
-	static isIAppliance = (obj) => (
-		IAppliance.duckTypeProperties
+	static isIAppliance(obj) {
+		return IAppliance.duckTypeProperties
 			.every((property) => Object.prototype.hasOwnProperty.call(obj, property))
-	)
+	}
 
 	/**
 	 * Getter for the list of data types accepted by the appliance.
 	 *
 	 * @return {String[]} The list of data types accepted by the appliance.
 	 */
-	static getInputTypes = () => {
+	static getInputTypes() {
 		throw new NotImplementedError('getInputTypes')
 	}
 
@@ -147,7 +151,7 @@ class IAppliance extends Transform {
 	 *
 	 * @return {String[]} The list of data types produced by the appliance.
 	 */
-	static getOutputTypes = () => {
+	static getOutputTypes() {
 		throw new NotImplementedError('getOutputTypes')
 	}
 }
