@@ -1,4 +1,5 @@
-[![Build Status](https://travis-ci.com/tvkitchen/base.svg?branch=master)](https://travis-ci.com/tvkitchen/base)
+![lint](https://github.com/tvkitchen/base/actions/workflows/lint.yml/badge.svg)
+![test](https://github.com/tvkitchen/base/actions/workflows/test.yml/badge.svg)
 
 # TV Kitchen: Base
 
