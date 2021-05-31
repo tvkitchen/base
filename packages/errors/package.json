@@ -12,5 +12,8 @@
   "module": "src/index.js",
   "publishConfig": {
     "access": "public"
+  },
+  "engines": {
+    "node": ">=10"
   }
 }

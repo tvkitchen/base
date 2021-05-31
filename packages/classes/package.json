@@ -15,5 +15,8 @@
   },
   "dependencies": {
     "avsc": "^5.4.21"
+  },
+  "engines": {
+    "node": ">=10"
   }
 }
