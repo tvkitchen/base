@@ -6,7 +6,8 @@
   "author": "Bad Idea Factory <biffuddotcom@biffud.com>",
   "license": "LGPL-3.0",
   "scripts": {
-    "build": "yarn workspaces run babel --root-mode upward src -d lib",
+    "clean": "rimraf packages/*/lib",
+    "build": "yarn clean && yarn workspaces run babel --root-mode upward src -d lib",
     "lint": "eslint .",
     "prepare": "yarn build",
     "prepublishOnly": "yarn test && yarn lint",
@@ -33,7 +34,8 @@
     "eslint-config-airbnb-base": "^14.1.0",
     "eslint-import-resolver-alias": "^1.1.2",
     "eslint-plugin-import": "^2.20.1",
-    "jest": "^25.4.0"
+    "jest": "^25.4.0",
+    "rimraf": "^3.0.2"
   },
   "engines": {
     "node": ">=10"
