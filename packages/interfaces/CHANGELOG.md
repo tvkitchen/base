@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Package now specifies Node 10.x or above.
 
+### Fixed
+- Fixed a bug where stream callback was being called by NodeJS directly, resulting in duplicate callback errors ([Issue #124](https://github.com/tvkitchen/base/issues/124))
+
 ## [4.0.0-alpha.4] - 2021-04-16
 ### Changed
 - `IAppliance` class methods are no longer properties / arrow functions.
