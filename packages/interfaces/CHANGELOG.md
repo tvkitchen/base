@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [4.0.0-alpha.5] - 2022-03-04
 ### Added
 - Package now specifies Node 16.x or above.
 
@@ -62,7 +64,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `IAppliance` core interface.
 - Initial setup.
 
-[Unreleased]: https://github.com/tvkitchen/base/compare/@tvkitchen/base-interfaces@4.0.0-alpha.4...HEAD
+[Unreleased]: https://github.com/tvkitchen/base/compare/@tvkitchen/base-interfaces@4.0.0-alpha.5...HEAD
+[4.0.0-alpha.5]: https://github.com/tvkitchen/base/releases/tag/@tvkitchen/base-interfaces@4.0.0-alpha.5
 [4.0.0-alpha.4]: https://github.com/tvkitchen/base/releases/tag/@tvkitchen/base-interfaces@4.0.0-alpha.4
 [4.0.0-alpha.3]: https://github.com/tvkitchen/base/releases/tag/@tvkitchen/base-interfaces@4.0.0-alpha.3
 [4.0.0-alpha.2]: https://github.com/tvkitchen/base/releases/tag/@tvkitchen/base-interfaces@4.0.0-alpha.2

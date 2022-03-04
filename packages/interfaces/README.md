@@ -9,11 +9,11 @@ See the [@tvkitchen/base README](https://github.com/tvkitchen/base/blob/master/R
 Using Yarn:
 
 ```sh
-yarn add @tvkitchen/base-interfaces --dev
+yarn add @tvkitchen/base-interfaces
 ```
 
 or using npm:
 
 ```sh
-npm install --save-dev @tvkitchen/base-interfaces
+npm install @tvkitchen/base-interfaces
 ```
