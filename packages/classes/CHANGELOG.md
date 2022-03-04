@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
-- Package now specifies Node 10.x or above.
+- Package now specifies Node 16.x or above.
 
 ## [2.0.0-alpha.1] - 2021-04-16
 ### Changed

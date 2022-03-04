@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
-- Package now specifies Node 10.x or above.
+- Package now specifies Node 16.x or above.
 
 ### Fixed
 - Fixed a bug where stream callback was being called by NodeJS directly, resulting in duplicate callback errors ([Issue #124](https://github.com/tvkitchen/base/issues/124))
