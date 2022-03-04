@@ -101,7 +101,7 @@ class IAppliance extends Transform {
 	/** @inheritdoc */
 	// eslint-disable-next-line no-underscore-dangle
 	async _transform(chunk, encoding, callback) {
-		this.ingestPayload(chunk)
+		return this.ingestPayload(chunk)
 			.then(() => callback())
 			.catch((error) => callback(error))
 	}
