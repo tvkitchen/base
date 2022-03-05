@@ -1,6 +1,7 @@
 ![lint](https://github.com/tvkitchen/base/actions/workflows/lint.yml/badge.svg)
 ![test](https://github.com/tvkitchen/base/actions/workflows/test.yml/badge.svg)
 ![CodeQL](https://github.com/tvkitchen/base/actions/workflows/codeql.yml/badge.svg)
+[![codecov](https://codecov.io/gh/tvkitchen/base/branch/main/graph/badge.svg?token=7AI30XD1N4)](https://codecov.io/gh/tvkitchen/base)
 
 # TV Kitchen: Base
 
