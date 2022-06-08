@@ -35,6 +35,19 @@ describe('AvroPayload', () => {
 			const serializedAvroPayload = AvroPayload.serialize(payload)
 			expect(serializedAvroPayload).toMatchSnapshot()
 		})
+		it('should properly should serialize data with a very long duration and position', () => {
+			const parameters = {
+				data: 'I ate all of the cheese',
+				type: 'CONFESSION',
+				createdAt: '2020-02-02T03:04:05.000Z',
+				origin: '2020-02-02T03:04:01.000Z',
+				duration: 29902310000,
+				position: 29902320000,
+			}
+			const payload = new AvroPayload(parameters)
+			const serializedAvroPayload = AvroPayload.serialize(payload)
+			expect(serializedAvroPayload).toMatchSnapshot()
+		})
 	})
 
 	describe('deserialize', () => {
@@ -56,6 +69,20 @@ describe('AvroPayload', () => {
 				origin: '2020-02-02T03:04:01.000Z',
 				duration: 1000,
 				position: 60000,
+			}
+			const payload = new AvroPayload(parameters)
+			const serializedAvroPayload = AvroPayload.serialize(payload)
+			const deserializedAvroPayload = AvroPayload.deserialize(serializedAvroPayload)
+			expect(deserializedAvroPayload).toMatchSnapshot()
+		})
+		it('should properly deserialize a serialized payload with a very long duration and position', () => {
+			const parameters = {
+				data: 'I ate all of the cheese',
+				type: 'CONFESSION',
+				createdAt: '2020-02-02T03:04:05.000Z',
+				origin: '2020-02-02T03:04:01.000Z',
+				duration: 29902310000,
+				position: 29902320000,
 			}
 			const payload = new AvroPayload(parameters)
 			const serializedAvroPayload = AvroPayload.serialize(payload)
