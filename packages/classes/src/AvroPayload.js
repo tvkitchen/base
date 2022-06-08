@@ -5,7 +5,7 @@ const AVRO_TYPES = {
 	RECORD: 'record',
 	NULLABLE_BYTES_OR_STRING: ['null', 'bytes', 'string'],
 	NULLABLE_STRING: ['null', 'string'],
-	INTEGER: 'int',
+	LONG: 'long',
 }
 
 const FIELD_TYPES = {
@@ -13,8 +13,8 @@ const FIELD_TYPES = {
 	type: AVRO_TYPES.NULLABLE_STRING,
 	createdAt: AVRO_TYPES.NULLABLE_STRING,
 	origin: AVRO_TYPES.NULLABLE_STRING,
-	duration: AVRO_TYPES.INTEGER,
-	position: AVRO_TYPES.INTEGER,
+	duration: AVRO_TYPES.LONG,
+	position: AVRO_TYPES.LONG,
 }
 
 const payloadType = avro.Type.forSchema({
